@@ -1,3 +1,3 @@
 - Main Menu
 
-  - [Home](/)
+  - [Home](index.md)
