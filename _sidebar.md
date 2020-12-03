@@ -1,1 +1,1 @@
-- Main Menu
+* [Home](/)
