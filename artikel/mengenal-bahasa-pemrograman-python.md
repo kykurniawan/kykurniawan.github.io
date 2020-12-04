@@ -1,7 +1,7 @@
 ---
 layout: default
 title: Mengenal Bahasa Pemrograman Python
-parent: artikel
+parent: Daftar Artikel
 ---
 
 # Mengenal Bahasa Pemrograman Python
