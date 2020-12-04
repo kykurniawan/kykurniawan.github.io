@@ -1,7 +1,7 @@
 remote_theme: pmarsceill/just-the-docs
 title: "Rizky Kurniawan"
 baseurl: ''
-color_scheme: "dark"
+color_scheme: "light"
 search_enabled: true
 search:
   # Split pages into sections that can be searched individually
