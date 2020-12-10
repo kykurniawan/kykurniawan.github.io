@@ -1,90 +1,37 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Daftar Postingan on Rizky Kurniawan</title>
+    <title>Daftar Postingan on SweetScar</title>
     <link>/posts/</link>
-    <description>Recent content in Daftar Postingan on Rizky Kurniawan</description>
+    <description>Recent content in Daftar Postingan on SweetScar</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Thu, 10 Dec 2020 16:33:25 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Artikel Kesembilan</title>
-      <link>/posts/artikel-kesembilan/</link>
-      <pubDate>Thu, 10 Dec 2020 17:48:14 +0800</pubDate>
+      <title>Cara Mengatasi Error Pada Saat Install Android Studio Di Windows Dengan Bantuan Robot</title>
+      <link>/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</link>
+      <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
       
-      <guid>/posts/artikel-kesembilan/</guid>
-      <description></description>
+      <guid>/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</guid>
+      <description>Halo teman teman semuanya kali ini saya akan berbagi bagaimana caranya mengatasi error yang terjadi pada android studio ketika kalian menginstallnya di windows.
+   Breaking Number Normal     Frangible 1,000,000 Get chairs    </description>
     </item>
     
     <item>
-      <title>Artikel Ketujuh</title>
-      <link>/posts/artikel-ketujuh/</link>
-      <pubDate>Thu, 10 Dec 2020 17:48:04 +0800</pubDate>
+      <title>Contoh Postingan Kedua</title>
+      <link>/posts/contoh-postingan-kedua/</link>
+      <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
       
-      <guid>/posts/artikel-ketujuh/</guid>
-      <description></description>
+      <guid>/posts/contoh-postingan-kedua/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor. Donec viverra, nisl id fringilla mollis, urna urna porta leo, sit amet lacinia lectus mi vitae ex.</description>
     </item>
     
     <item>
-      <title>Artikel Keenam</title>
-      <link>/posts/artikel-keenam/</link>
-      <pubDate>Thu, 10 Dec 2020 17:47:54 +0800</pubDate>
+      <title>Contoh Postingan Pertama</title>
+      <link>/posts/contoh-postingan-pertama/</link>
+      <pubDate>Thu, 10 Dec 2020 21:05:54 +0800</pubDate>
       
-      <guid>/posts/artikel-keenam/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Artikel Kelima</title>
-      <link>/posts/artikel-kelima/</link>
-      <pubDate>Thu, 10 Dec 2020 17:47:30 +0800</pubDate>
-      
-      <guid>/posts/artikel-kelima/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Artikel Kedelapan</title>
-      <link>/posts/artikel-kedelapan/</link>
-      <pubDate>Thu, 10 Dec 2020 17:46:53 +0800</pubDate>
-      
-      <guid>/posts/artikel-kedelapan/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Artikel Keempat</title>
-      <link>/posts/artikel-keempat/</link>
-      <pubDate>Thu, 10 Dec 2020 16:31:45 +0800</pubDate>
-      
-      <guid>/posts/artikel-keempat/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Artikel Ketiga</title>
-      <link>/posts/artikel-ketiga/</link>
-      <pubDate>Thu, 10 Dec 2020 16:31:22 +0800</pubDate>
-      
-      <guid>/posts/artikel-ketiga/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Artikel Kedua</title>
-      <link>/posts/artikel-kedua/</link>
-      <pubDate>Thu, 10 Dec 2020 16:24:10 +0800</pubDate>
-      
-      <guid>/posts/artikel-kedua/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Artikel Pertama</title>
-      <link>/posts/artikel-pertama/</link>
-      <pubDate>Thu, 10 Dec 2020 14:39:19 +0800</pubDate>
-      
-      <guid>/posts/artikel-pertama/</guid>
-      <description>Percobaan postingan pertama Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent laoreet neque tellus, in volutpat magna vehicula in. Suspendisse in consectetur turpis. Duis convallis consequat mi quis dignissim. Quisque vitae cursus dolor. Pellentesque dapibus dui porttitor, convallis ipsum eget, porta ligula. Suspendisse pretium congue aliquam. Donec volutpat metus at tristique pellentesque. Proin pretium tortor vitae arcu porttitor, sit amet dictum nibh semper. Nullam pulvinar auctor nunc, a sagittis purus posuere in.</description>
+      <guid>/posts/contoh-postingan-pertama/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor. Donec viverra, nisl id fringilla mollis, urna urna porta leo, sit amet lacinia lectus mi vitae ex.</description>
     </item>
     
   </channel>

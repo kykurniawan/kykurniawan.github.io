@@ -3,33 +3,48 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/posts/artikel-kesembilan/</loc>
-    <lastmod>2020-12-10T17:48:14+08:00</lastmod>
+    <loc>/tags/android/</loc>
+    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</loc>
+    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/tags/programing/</loc>
+    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
   </url>
   
   <url>
     <loc>/</loc>
-    <lastmod>2020-12-10T17:48:14+08:00</lastmod>
+    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/artikel-ketujuh/</loc>
-    <lastmod>2020-12-10T17:48:04+08:00</lastmod>
+    <loc>/tags/</loc>
+    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/artikel-keenam/</loc>
-    <lastmod>2020-12-10T17:47:54+08:00</lastmod>
+    <loc>/posts/contoh-postingan-kedua/</loc>
+    <lastmod>2020-12-10T21:11:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/artikel-kelima/</loc>
-    <lastmod>2020-12-10T17:47:30+08:00</lastmod>
+    <loc>/posts/contoh-postingan-pertama/</loc>
+    <lastmod>2020-12-10T21:05:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/artikel-kedelapan/</loc>
-    <lastmod>2020-12-10T17:46:53+08:00</lastmod>
+    <loc>/portfolio/</loc>
+    <lastmod>2020-12-10T19:16:22+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/about/</loc>
+    <lastmod>2020-12-10T19:07:18+08:00</lastmod>
   </url>
   
   <url>
@@ -38,31 +53,7 @@
   </url>
   
   <url>
-    <loc>/posts/artikel-keempat/</loc>
-    <lastmod>2020-12-10T16:31:45+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/artikel-ketiga/</loc>
-    <lastmod>2020-12-10T16:31:22+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/artikel-kedua/</loc>
-    <lastmod>2020-12-10T16:24:10+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/artikel-pertama/</loc>
-    <lastmod>2020-12-10T14:39:19+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/categories/</loc>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
   </url>
   
 </urlset>
