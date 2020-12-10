@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rizky Kurniawan</title>
-    <link>/</link>
-    <description>Recent content on Rizky Kurniawan</description>
+    <title>Daftar Postingan on Rizky Kurniawan</title>
+    <link>/posts/</link>
+    <description>Recent content in Daftar Postingan on Rizky Kurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 17:48:14 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 10 Dec 2020 16:33:25 +0800</lastBuildDate><atom:link href="/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Artikel Kesembilan</title>
       <link>/posts/artikel-kesembilan/</link>
