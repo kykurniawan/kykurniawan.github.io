@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Website on RizkyKurniawan</title>
+    <title>Website on Rizky Kurniawan</title>
     <link>https://rizkykurniawan.com/tags/website/</link>
-    <description>Recent content in Website on RizkyKurniawan</description>
+    <description>Recent content in Website on Rizky Kurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <lastBuildDate>Thu, 10 Dec 2020 21:11:07 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/tags/website/index.xml" rel="self" type="application/rss+xml" />
@@ -13,7 +13,7 @@
       <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
       
       <guid>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor.</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
     </item>
     
   </channel>

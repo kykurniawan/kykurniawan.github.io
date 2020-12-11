@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Android on RizkyKurniawan</title>
+    <title>Android on Rizky Kurniawan</title>
     <link>https://rizkykurniawan.com/tags/android/</link>
-    <description>Recent content in Android on RizkyKurniawan</description>
+    <description>Recent content in Android on Rizky Kurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
     <lastBuildDate>Thu, 10 Dec 2020 21:12:15 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/tags/android/index.xml" rel="self" type="application/rss+xml" />
@@ -13,8 +13,7 @@
       <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
       
       <guid>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</guid>
-      <description>Halo teman teman semuanya kali ini saya akan berbagi bagaimana caranya mengatasi error yang terjadi pada android studio ketika kalian menginstallnya di windows.
-   Breaking Number Normal     Frangible 1,000,000 Get chairs    </description>
+      <description>Halo teman teman semuanya kali ini saya akan berbagi bagaimana caranya mengatasi error yang terjadi pada android studio ketika kalian menginstallnya di windows.</description>
     </item>
     
     <item>
@@ -23,7 +22,7 @@
       <pubDate>Thu, 10 Dec 2020 21:05:54 +0800</pubDate>
       
       <guid>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor.</description>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
     </item>
     
   </channel>
