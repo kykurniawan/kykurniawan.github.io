@@ -1,0 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,300&family=Roboto+Condensed:wght@300;400;700&display=swap');
+/* font */
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+
+p {
+    font-family: 'Merriweather', serif;
+    font-weight: 300;
+    color: rgb(29, 29, 29);
+}
+
+.merriweather {
+    font-family: 'Merriweather', serif;
+}
+
+.roboto-condensed {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+/* custom background color */
+
+.bg-teal {
+    background-color: #008080;
+}
+
+.bg-light-teal {
+    background-color: #8fc5c5;
+}
+
+/* custom text color */
+
+.text-teal {
+    color: #008080;
+}
+
+/* custom link color */
+
+.link-teal {
+    color: #008080;
+}
+
+.link-teal:hover {
+    color: #006b6b;
+}
+
+/* custom button color */
+
+.btn-teal {
+    background-color: #008080;
+    color: white;
+}
+
+.btn-teal:hover {
+    background-color: #006b6b;
+}
+
+/* image */
+
+img[src*="#w100"] {
+    width: 100%;
+    height: auto;
+}
+
+img[src*="#w50"] {
+    width: 50%;
+    height: auto;
+}

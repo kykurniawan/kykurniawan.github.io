@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tutorial Kotlin on Rizky Kurniawan</title>
+    <link>https://rizkykurniawan.com/categories/tutorial-kotlin/</link>
+    <description>Recent content in Tutorial Kotlin on Rizky Kurniawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Thu, 10 Dec 2020 21:05:54 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/categories/tutorial-kotlin/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contoh Postingan Pertama</title>
+      <link>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</link>
+      <pubDate>Thu, 10 Dec 2020 21:05:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
+    </item>
+    
+  </channel>
+</rss>

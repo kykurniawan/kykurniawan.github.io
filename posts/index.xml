@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Postingan on Rizky Kurniawan</title>
+    <link>https://rizkykurniawan.com/posts/</link>
+    <description>Recent content in Postingan on Rizky Kurniawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Fri, 11 Dec 2020 15:34:54 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat Website Sederhanda Dengan Codeigniter</title>
+      <link>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</link>
+      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</guid>
+      <description>Halo teman teman semuanya kali ini kita akan belajar bagaimana cara membuat website sederhana dengan menggunakan framework codeigniter.</description>
+    </item>
+    
+    <item>
+      <title>Cara Mengatasi Error Pada Saat Install Android Studio Di Windows Dengan Bantuan Robot</title>
+      <link>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</link>
+      <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</guid>
+      <description>Halo teman teman semuanya kali ini saya akan berbagi bagaimana caranya mengatasi error yang terjadi pada android studio ketika kalian menginstallnya di windows.</description>
+    </item>
+    
+    <item>
+      <title>Contoh Postingan Kedua</title>
+      <link>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</link>
+      <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
+    </item>
+    
+    <item>
+      <title>Contoh Postingan Pertama</title>
+      <link>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</link>
+      <pubDate>Thu, 10 Dec 2020 21:05:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
+    </item>
+    
+  </channel>
+</rss>
