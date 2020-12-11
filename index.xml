@@ -1,54 +1,64 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>SweetScar</title>
-    <link>/</link>
-    <description>Recent content on SweetScar</description>
+    <title>RizkyKurniawan</title>
+    <link>https://rizkykurniawan.com/</link>
+    <description>Recent content on RizkyKurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 21:12:15 +0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>id-ID</language>
+    <lastBuildDate>Fri, 11 Dec 2020 15:34:54 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat Website Sederhanda Dengan Codeigniter</title>
+      <link>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</link>
+      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</guid>
+      <description>Halo teman teman semuanya kali ini kita akan belajar bagaimana cara membuat website sederhana dengan menggunakan framework codeigniter.</description>
+    </item>
+    
     <item>
       <title>Cara Mengatasi Error Pada Saat Install Android Studio Di Windows Dengan Bantuan Robot</title>
-      <link>/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</link>
+      <link>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</link>
       <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
       
-      <guid>/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</guid>
+      <guid>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</guid>
       <description>Halo teman teman semuanya kali ini saya akan berbagi bagaimana caranya mengatasi error yang terjadi pada android studio ketika kalian menginstallnya di windows.
    Breaking Number Normal     Frangible 1,000,000 Get chairs    </description>
     </item>
     
     <item>
       <title>Contoh Postingan Kedua</title>
-      <link>/posts/contoh-postingan-kedua/</link>
+      <link>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</link>
       <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
       
-      <guid>/posts/contoh-postingan-kedua/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor. Donec viverra, nisl id fringilla mollis, urna urna porta leo, sit amet lacinia lectus mi vitae ex.</description>
+      <guid>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor.</description>
     </item>
     
     <item>
       <title>Contoh Postingan Pertama</title>
-      <link>/posts/contoh-postingan-pertama/</link>
+      <link>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</link>
       <pubDate>Thu, 10 Dec 2020 21:05:54 +0800</pubDate>
       
-      <guid>/posts/contoh-postingan-pertama/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor. Donec viverra, nisl id fringilla mollis, urna urna porta leo, sit amet lacinia lectus mi vitae ex.</description>
+      <guid>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</guid>
+      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor.</description>
     </item>
     
     <item>
       <title>Portfolio</title>
-      <link>/portfolio/</link>
+      <link>https://rizkykurniawan.com/portfolio/</link>
       <pubDate>Thu, 10 Dec 2020 19:16:22 +0800</pubDate>
       
-      <guid>/portfolio/</guid>
+      <guid>https://rizkykurniawan.com/portfolio/</guid>
       <description>Ini contoh halaman untuk portofolio</description>
     </item>
     
     <item>
       <title>Tentang Saya</title>
-      <link>/about/</link>
+      <link>https://rizkykurniawan.com/about/</link>
       <pubDate>Thu, 10 Dec 2020 19:07:18 +0800</pubDate>
       
-      <guid>/about/</guid>
+      <guid>https://rizkykurniawan.com/about/</guid>
       <description>Halo Nama Saya Rizky Kurniawan Hobi saya adalah:
  Membaca buku Belajar Makan Minum Mandi Ngopi  </description>
     </item>

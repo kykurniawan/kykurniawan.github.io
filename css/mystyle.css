@@ -50,6 +50,7 @@ p {
 
 .btn-teal {
     background-color: #008080;
+    color: white;
 }
 
 .btn-teal:hover {

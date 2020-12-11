@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codeigniter on RizkyKurniawan</title>
+    <link>https://rizkykurniawan.com/tags/codeigniter/</link>
+    <description>Recent content in Codeigniter on RizkyKurniawan</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>id-ID</language>
+    <lastBuildDate>Fri, 11 Dec 2020 15:34:54 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/tags/codeigniter/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Membuat Website Sederhanda Dengan Codeigniter</title>
+      <link>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</link>
+      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</guid>
+      <description>Halo teman teman semuanya kali ini kita akan belajar bagaimana cara membuat website sederhana dengan menggunakan framework codeigniter.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,26 +1,54 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on SweetScar</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on SweetScar</description>
+    <title>Tags on RizkyKurniawan</title>
+    <link>https://rizkykurniawan.com/tags/</link>
+    <description>Recent content in Tags on RizkyKurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 10 Dec 2020 21:12:15 +0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>id-ID</language>
+    <lastBuildDate>Fri, 11 Dec 2020 15:34:54 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Android</title>
-      <link>/tags/android/</link>
-      <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
+      <title>Codeigniter</title>
+      <link>https://rizkykurniawan.com/tags/codeigniter/</link>
+      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
       
-      <guid>/tags/android/</guid>
+      <guid>https://rizkykurniawan.com/tags/codeigniter/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>PHP</title>
+      <link>https://rizkykurniawan.com/tags/php/</link>
+      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/tags/php/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Programing</title>
-      <link>/tags/programing/</link>
+      <link>https://rizkykurniawan.com/tags/programing/</link>
+      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/tags/programing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Android</title>
+      <link>https://rizkykurniawan.com/tags/android/</link>
       <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
       
-      <guid>/tags/programing/</guid>
+      <guid>https://rizkykurniawan.com/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Website</title>
+      <link>https://rizkykurniawan.com/tags/website/</link>
+      <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/tags/website/</guid>
       <description></description>
     </item>
     

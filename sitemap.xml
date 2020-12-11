@@ -3,57 +3,93 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/tags/android/</loc>
+    <loc>https://rizkykurniawan.com/categories/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/tags/codeigniter/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/tags/php/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/posts/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/tags/programing/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/tags/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/categories/tutorial-php/</loc>
+    <lastmod>2020-12-11T15:34:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/tags/android/</loc>
     <lastmod>2020-12-10T21:12:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</loc>
+    <loc>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</loc>
     <lastmod>2020-12-10T21:12:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/tags/programing/</loc>
+    <loc>https://rizkykurniawan.com/categories/tutorial-android/</loc>
     <lastmod>2020-12-10T21:12:15+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/</loc>
-    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/tags/</loc>
-    <lastmod>2020-12-10T21:12:15+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/contoh-postingan-kedua/</loc>
+    <loc>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</loc>
     <lastmod>2020-12-10T21:11:07+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/posts/contoh-postingan-pertama/</loc>
+    <loc>https://rizkykurniawan.com/tags/website/</loc>
+    <lastmod>2020-12-10T21:11:07+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</loc>
     <lastmod>2020-12-10T21:05:54+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/portfolio/</loc>
+    <loc>https://rizkykurniawan.com/categories/tutorial-kotlin/</loc>
+    <lastmod>2020-12-10T21:05:54+08:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rizkykurniawan.com/portfolio/</loc>
     <lastmod>2020-12-10T19:16:22+08:00</lastmod>
   </url>
   
   <url>
-    <loc>/about/</loc>
+    <loc>https://rizkykurniawan.com/about/</loc>
     <lastmod>2020-12-10T19:07:18+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/posts/</loc>
-    <lastmod>2020-12-10T16:33:25+08:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/categories/</loc>
   </url>
   
 </urlset>
