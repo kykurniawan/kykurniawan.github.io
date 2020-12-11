@@ -10,7 +10,6 @@ p {
     font-family: 'Merriweather', serif;
     font-weight: 300;
     color: rgb(29, 29, 29);
-    text-align: justify;
 }
 
 .merriweather {
@@ -58,7 +57,13 @@ p {
 }
 
 /* image */
-img {
-    max-width: 100%;
+
+img[src*="#w100"] {
+    width: 100%;
+    height: auto;
+}
+
+img[src*="#w50"] {
+    width: 50%;
     height: auto;
 }
