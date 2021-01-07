@@ -17,13 +17,14 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-    crossorigin="anonymous" /><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
+    crossorigin="anonymous" />
+    <script async src="https://cse.google.com/cse.js?cx=cc529f6aac61bd6ae"></script><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
         <div id="content"><nav class="bg-white py-3 fixed-top">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-between">
-                <div class="text-secondary" style="font-weight: bolder;">RIZKY</div>
-                <div class="material-icons text-secondary">search</div>
+                <div class="text-secondary" style="font-weight: bolder;" role="button" onclick="window.location.href='/'">RIZKY</div>
+                <div class="material-icons text-secondary" role="button" onclick="window.location.href='/search'">search</div>
             </div>
         </div>
     </div>
@@ -33,12 +34,12 @@
             <div class="col-lg-5 mx-auto bg-white">
                 <div style="height: 20vh;" class="d-flex align-items-center justify-content-start">
                     <div class="image" style="width: 100px;">
-                        <img class="img-fluid w-100 rounded-circle"
+                        <img class="img-fluid w-100 rounded-circle shadow"
                             src="https://www.edinburghpets.com/wp-content/uploads/bb-plugin/cache/cat-square-lg-circle.jpg"
                             alt="Profil">
                     </div>
                     <div class="text" style="margin-left: 10px;">
-                        <div><span class="small">Selamat Datang,</span><br>Saya Rizky Kurniawan</div>
+                        <div><span class="small text-secondary">Selamat Datang,</span><br><span style="font-weight: bold;">Saya Rizky Kurniawan</span></div>
                     </div>
                 </div>
             </div>
@@ -120,7 +121,7 @@
         </div>
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white border-top py-2 d-flex justify-content-end">
-                <div class="text-teal small">Lihat Semua Postingan</div>
+                <div class="text-teal small" role="button" onclick="window.location.href='/posts'">Lihat Semua Postingan</div>
             </div>
         </div>
     </div>
@@ -165,37 +166,37 @@
         </div>
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white border-top py-2 d-flex justify-content-end">
-                <div class="text-teal small">Lihat Semua Portofolio</div>
+                <div class="text-teal small" role="button" onclick="window.location.href='/portfolios'">Lihat Semua Portofolio</div>
             </div>
         </div>
     </div>
-</section><nav id="bottom-navigation" class="bg-light border-top py-0 fixed-bottom">
+</section><nav id="bottom-navigation" class="bg-light py-0 fixed-bottom">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 mx-auto">
-                <ul class="nav justify-content-between">
-                    <li class="nav-item" style="width: 25%;">
-                        <a class="nav-link text-center link-teal" href="#">
-                            <span class="material-icons">home</span>
+            <div class="col-lg-5 mx-auto border-top">
+                <ul class="nav nav-fill justify-content-between">
+                    <li class="nav-item">
+                        <a class="nav-link text-center link-teal" href="/">
+                            <div class="material-icons">home</div>
                             <div style="margin-top: -8px; font-size: 10px;">Beranda</div>
                         </a>
                     </li>
-                    <li class="nav-item" style="width: 25%;">
-                        <a class="nav-link text-center link-teal" href="#">
-                            <span class="material-icons">article</span>
+                    <li class="nav-item">
+                        <a class="nav-link text-center link-teal" href="/posts">
+                            <div class="material-icons">article</div>
                             <div style="margin-top: -8px; font-size: 10px;">Postingan</div>
                         </a>
                     </li>
-                    <li class="nav-item" style="width: 25%;">
-                        <a class="nav-link text-center link-teal" href="#">
-                            <span class="material-icons">assignment_ind</span>
+                    <li class="nav-item">
+                        <a class="nav-link text-center link-teal" href="/portfolios/">
+                            <div class="material-icons">business</div>
                             <div style="margin-top: -8px; font-size: 10px;">Portofolio</div>
                         </a>
                     </li>
-                    <li class="nav-item" style="width: 25%;">
-                        <a class="nav-link text-center link-teal" href="#">
-                            <span class="material-icons">perm_phone_msg</span>
-                            <div style="margin-top: -8px; font-size: 10px;">Kontak</div>
+                    <li class="nav-item">
+                        <a class="nav-link text-center link-teal" href="/about">
+                            <div class="material-icons">assignment_ind</div>
+                            <div style="margin-top: -8px; font-size: 10px;">About Me</div>
                         </a>
                     </li>
                 </ul>
