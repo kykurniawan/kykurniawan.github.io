@@ -176,21 +176,18 @@
         $('#actionbar-dropdown').toggleClass('show')
     })
 </script>
-<script src="/js/sw.js"></script>
 <script>
     if ('serviceWorker' in navigator) {
-        navigator.serviceWorker
-            .register('/sw.js', { scope: '/' })
-            .then(function (registration) {
-                console.log('Service Worker Registered');
+            window.addEventListener('load', function () {
+                navigator.serviceWorker.register('/js/sw.js').then(function (registration) {
+                    
+                    console.log('ServiceWorker registration successful with scope: ', registration.scope);
+                }, function (err) {
+                    
+                    console.log('ServiceWorker registration failed: ', err);
+                });
             });
-
-        navigator.serviceWorker
-            .ready
-            .then(function (registration) {
-                console.log('Service Worker Ready');
-            });
-    }
+        }  
 </script>
 
 </body>
