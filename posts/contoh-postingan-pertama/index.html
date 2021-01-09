@@ -171,29 +171,35 @@
         $('#actionbar-dropdown').toggleClass('show')
     })
 </script>
+
 <script>
+    let ctaInstallation = $('#cta-installation')
+    let butInstall = $('#butInstall')
+    let butIgnoreInstall = $('#butIgnoreInstall')
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/js/sw.js').then(function (registration) {
+            navigator.serviceWorker.register('/sw.js').then(function (registration) {
                 
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
             }, function (err) {
                 
                 console.log('ServiceWorker registration failed: ', err);
             });
         });
     }
-</script>
-<script>
-    let butInstall = document.getElementById('butInstall');
+
+
     window.addEventListener('beforeinstallprompt', (event) => {
-        console.log('👍', 'beforeinstallprompt', event);
         
         window.deferredPrompt = event;
     });
+    
+    if(window.deferredPrompt != null) {
+        ctaInstallation.show()
+    } else {
+        ctaInstallation.hide()
+    }
 
     butInstall.addEventListener('click', () => {
-        console.log('👍', 'butInstall-clicked');
         const promptEvent = window.deferredPrompt;
         if (!promptEvent) {
             
@@ -203,13 +209,16 @@
         promptEvent.prompt();
         
         promptEvent.userChoice.then((result) => {
-            console.log('👍', 'userChoice', result);
             
             
             window.deferredPrompt = null;
             
             divInstall.classList.toggle('hidden', true);
         });
+    });
+
+    butIgnoreInstall.addEventListener('click', ()=>{
+        window.deferredPrompt = null;
     });
     window.addEventListener('appinstalled', (event) => {
         console.log('👍', 'appinstalled', event);

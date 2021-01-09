@@ -60,7 +60,8 @@
                             alt="Profil">
                     </div>
                     <div class="text" style="margin-left: 10px;">
-                        <div><span class="small text-secondary">Selamat Datang,</span><br><span style="font-weight: bold;">Saya Rizky Kurniawan</span></div>
+                        <div><span class="small text-secondary">Selamat Datang,</span><br><span
+                                style="font-weight: bold;">Saya Rizky Kurniawan</span></div>
                     </div>
                 </div>
             </div>
@@ -70,11 +71,6 @@
                 onclick="window.location.href='/about'">
                 <div class="text-teal small">Tentang Saya</div>
                 <div class="material-icons text-teal">keyboard_arrow_right</div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-5 mx-auto bg-white border-top py-2">
-                <button id="butInstall" class="btn btn-sm btn-info w-100">Install App</button>
             </div>
         </div>
     </div>
@@ -244,6 +240,20 @@
             </div>
         </div>
     </div>
+</section><section id="cta-installation" style="display: none;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mx-auto bg-teal py-3">
+                <h6 class="text-light text-end mb-3 small">Akses lebih mudah?, Install rizkykurniawan.com di handphone kamu sekarang!</h6>
+                <div class="text-end">
+                    <button id="butInstall" role="button" type="button"
+                        class="btn btn-sm btn-danger rounded py-0">Install</button>
+                    <button id="butIgnoreInstall" role="button" type="button"
+                        class="btn btn-sm btn-light rounded py-0">Nggak Mau</button>
+                </div>
+            </div>
+        </div>
+    </div>
 </section><nav id="bottom-navigation" class="bg-light py-0 fixed-bottom">
     <div class="container">
         <div class="row">
@@ -288,29 +298,35 @@
         $('#actionbar-dropdown').toggleClass('show')
     })
 </script>
+
 <script>
+    let ctaInstallation = $('#cta-installation')
+    let butInstall = $('#butInstall')
+    let butIgnoreInstall = $('#butIgnoreInstall')
     if ('serviceWorker' in navigator) {
         window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/js/sw.js').then(function (registration) {
+            navigator.serviceWorker.register('/sw.js').then(function (registration) {
                 
-                console.log('ServiceWorker registration successful with scope: ', registration.scope);
             }, function (err) {
                 
                 console.log('ServiceWorker registration failed: ', err);
             });
         });
     }
-</script>
-<script>
-    let butInstall = document.getElementById('butInstall');
+
+
     window.addEventListener('beforeinstallprompt', (event) => {
-        console.log('👍', 'beforeinstallprompt', event);
         
         window.deferredPrompt = event;
     });
+    
+    if(window.deferredPrompt != null) {
+        ctaInstallation.show()
+    } else {
+        ctaInstallation.hide()
+    }
 
     butInstall.addEventListener('click', () => {
-        console.log('👍', 'butInstall-clicked');
         const promptEvent = window.deferredPrompt;
         if (!promptEvent) {
             
@@ -320,13 +336,16 @@
         promptEvent.prompt();
         
         promptEvent.userChoice.then((result) => {
-            console.log('👍', 'userChoice', result);
             
             
             window.deferredPrompt = null;
             
             divInstall.classList.toggle('hidden', true);
         });
+    });
+
+    butIgnoreInstall.addEventListener('click', ()=>{
+        window.deferredPrompt = null;
     });
     window.addEventListener('appinstalled', (event) => {
         console.log('👍', 'appinstalled', event);
