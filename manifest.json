@@ -1,6 +1,6 @@
 {
     "name": "RIZKY",
-    "short_name": "rizky",
+    "short_name": "Rizky Kurniawan",
     "icons": [
         {
             "src": "/favicon-128.png",
@@ -23,7 +23,7 @@
             "type": "image/png"
         },
         {
-            "src": "/splash.png",
+            "src": "/icon-512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
