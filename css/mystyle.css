@@ -12,6 +12,24 @@ p {
     color: rgb(29, 29, 29);
 }
 
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    color: rgba(255, 255, 255, .75);
+    -webkit-overflow-scrolling: touch;
+}
+
 .merriweather {
     font-family: 'Merriweather', serif;
 }

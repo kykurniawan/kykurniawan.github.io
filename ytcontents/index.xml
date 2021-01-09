@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rizky Kurniawan</title>
-    <link>https://rizkykurniawan.com/</link>
-    <description>Recent content on Rizky Kurniawan</description>
+    <title>Konten YouTube on Rizky Kurniawan</title>
+    <link>https://rizkykurniawan.com/ytcontents/</link>
+    <description>Recent content in Konten YouTube on Rizky Kurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 09 Jan 2021 09:37:23 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 09 Jan 2021 09:37:23 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/ytcontents/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Kontent Youtube Kesepuluh</title>
       <link>https://rizkykurniawan.com/ytcontents/kontent-youtube-kesepuluh/</link>
@@ -95,79 +95,6 @@
       
       <guid>https://rizkykurniawan.com/ytcontents/kontent-youtube-pertama/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Portfolio Kedua</title>
-      <link>https://rizkykurniawan.com/portfolios/portfolio-kedua/</link>
-      <pubDate>Thu, 07 Jan 2021 17:02:38 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/portfolios/portfolio-kedua/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Membuat Website Sederhanda Dengan Codeigniter</title>
-      <link>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</link>
-      <pubDate>Fri, 11 Dec 2020 15:34:54 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/</guid>
-      <description>Halo teman teman semuanya kali ini kita akan belajar bagaimana cara membuat website sederhana dengan menggunakan framework codeigniter.</description>
-    </item>
-    
-    <item>
-      <title>Cara Mengatasi Error Pada Saat Install Android Studio Di Windows Dengan Bantuan Robot</title>
-      <link>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</link>
-      <pubDate>Thu, 10 Dec 2020 21:12:15 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/posts/cara-mengatasi-error-pada-saat-install-android-studio-di-windows-dengan-bantuan-robot/</guid>
-      <description>Halo teman teman semuanya kali ini saya akan berbagi bagaimana caranya mengatasi error yang terjadi pada android studio ketika kalian menginstallnya di windows.</description>
-    </item>
-    
-    <item>
-      <title>Contoh Postingan Kedua</title>
-      <link>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</link>
-      <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/posts/contoh-postingan-kedua/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
-    </item>
-    
-    <item>
-      <title>Portfolio Pertama</title>
-      <link>https://rizkykurniawan.com/portfolios/portfolio-pertama/</link>
-      <pubDate>Thu, 10 Dec 2020 21:11:07 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/portfolios/portfolio-pertama/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Contoh Postingan Pertama</title>
-      <link>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</link>
-      <pubDate>Thu, 10 Dec 2020 21:05:54 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/posts/contoh-postingan-pertama/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum.</description>
-    </item>
-    
-    <item>
-      <title>Pencarian</title>
-      <link>https://rizkykurniawan.com/search/</link>
-      <pubDate>Thu, 10 Dec 2020 19:07:18 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/search/</guid>
-      <description> </description>
-    </item>
-    
-    <item>
-      <title>Tentang Saya</title>
-      <link>https://rizkykurniawan.com/about/</link>
-      <pubDate>Thu, 10 Dec 2020 19:07:18 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/about/</guid>
-      <description>Halo Nama Saya Rizky Kurniawan Hobi saya adalah:
- Membaca buku Belajar Makan Minum Mandi Ngopi  </description>
     </item>
     
   </channel>
