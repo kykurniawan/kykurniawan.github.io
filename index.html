@@ -38,8 +38,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
-    <script async src="https://cse.google.com/cse.js?cx=cc529f6aac61bd6ae"></script>
-    <link rel="manifest" href="/manifest.json"><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
+<script async src="https://cse.google.com/cse.js?cx=cc529f6aac61bd6ae"></script>
+
+<style>
+    .pagination .page-item .page-link{
+        border:none !important;
+    }
+</style><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
         <div id="content"><nav class="bg-white py-3 fixed-top">
     <div class="container">
         <div class="row">
@@ -56,12 +61,17 @@
                 <div style="height: 20vh;" class="d-flex align-items-center justify-content-start">
                     <div class="image" style="width: 100px;">
                         <img class="img-fluid w-100 rounded-circle shadow"
-                            src="https://www.edinburghpets.com/wp-content/uploads/bb-plugin/cache/cat-square-lg-circle.jpg"
+                            src="./img/riswan_circle.png"
                             alt="Profil">
                     </div>
                     <div class="text" style="margin-left: 10px;">
-                        <div><span class="small text-secondary">Selamat Datang,</span><br><span
-                                style="font-weight: bold;">Saya Rizky Kurniawan</span></div>
+                        <div>
+                            <span class="small text-secondary">Selamat datang,</span>
+                            <br>
+                            <span style="font-weight: bold;">Saya Rizky Kurniawan</span>
+                            <br>
+                            <span class="text-muted small">Web Backend Developer</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -78,8 +88,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white py-3">
-                <h6 class="small text-muted">Postingan</h6>
-                <h5 class="mb-3">Berbagai Artikel Menarik Untuk Kamu</h5>
+                <h6 class="small text-muted mb-3" style="font-weight: bold;">Postingan</h6>
                 <div class="list-group list-group-flush">
                     
                     <a href="https://rizkykurniawan.com/posts/membuat-website-sederhanda-dengan-codeigniter/" class="list-group-item list-group-item-action px-0">
@@ -151,7 +160,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto py-3">
-                <h6 class="small text-dark mb-3" style="font-weight: bold;">Konten YouTube</h6>
+                <h6 class="small text-muted mb-3" style="font-weight: bold;">Konten YouTube</h6>
                 <div class="nav-scroller">
                     <nav class="nav">
                         
@@ -199,8 +208,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white py-3">
-                <h6 class="small text-muted">Portofolio</h6>
-                <h5 class="mb-3">Lihat apa saja yang telah saya kerjakan</h5>
+                <h6 class="small text-muted mb-3" style="font-weight: bold;">Portofolio</h6>
                 <div class="list-group list-group-flush">
                     
                     <a href="https://rizkykurniawan.com/portfolios/portfolio-kedua/" class="list-group-item list-group-item-action px-0">
@@ -297,53 +305,5 @@
         e.preventDefault()
         $('#actionbar-dropdown').toggleClass('show')
     })
-</script>
-
-<script>
-    let ctaInstallation = $('#cta-installation')
-    let butInstall = $('#butInstall')
-    let butIgnoreInstall = $('#butIgnoreInstall')
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                
-            }, function (err) {
-                
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
-
-
-    window.addEventListener('beforeinstallprompt', (event) => {
-        
-        window.deferredPrompt = event;
-        ctaInstallation.show()
-    });
-
-    butInstall.addEventListener('click', () => {
-        const promptEvent = window.deferredPrompt;
-        if (!promptEvent) {
-            
-            return;
-        }
-        
-        promptEvent.prompt();
-        
-        promptEvent.userChoice.then((result) => {
-            
-            
-            window.deferredPrompt = null;
-            
-            divInstall.classList.toggle('hidden', true);
-        });
-    });
-
-    butIgnoreInstall.addEventListener('click', ()=>{
-        window.deferredPrompt = null;
-    });
-    window.addEventListener('appinstalled', (event) => {
-        console.log('👍', 'appinstalled', event);
-    });
 </script></body>
 </html>

@@ -38,8 +38,13 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
     integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
     crossorigin="anonymous" />
-    <script async src="https://cse.google.com/cse.js?cx=cc529f6aac61bd6ae"></script>
-    <link rel="manifest" href="/manifest.json"><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
+<script async src="https://cse.google.com/cse.js?cx=cc529f6aac61bd6ae"></script>
+
+<style>
+    .pagination .page-item .page-link{
+        border:none !important;
+    }
+</style><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
         <div id="content">
 <nav class="bg-white py-3 fixed-top">
     <div class="container">
@@ -86,7 +91,7 @@
                 <br><br>
                 
                 
-                <article class='small' style="text-align: justify;">
+                <article class='small' style="text-align: left;">
                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ullamcorper eu nisl fermentum aliquet. Nulla bibendum auctor nisi sit amet elementum. Vivamus vel elementum lectus. Vivamus metus odio, laoreet sit amet porta ut, maximus non nunc. Nulla lacinia diam non leo varius faucibus. Nullam ex dui, imperdiet sit amet purus ac, eleifend mollis tortor. Donec viverra, nisl id fringilla mollis, urna urna porta leo, sit amet lacinia lectus mi vitae ex. Maecenas ut enim erat. Fusce cursus tempus convallis.</p>
 <p>Vivamus pretium maximus dolor id porta. Suspendisse id ipsum consequat, posuere nibh ac, pretium ante. Pellentesque placerat sagittis dolor vel luctus. Maecenas congue quam a mollis dignissim. Ut urna nisl, ultricies non sodales a, vehicula vel dui. Maecenas vel malesuada turpis, at auctor ante. Vivamus tempus, mi et consectetur tempor, mi elit vestibulum velit, at tincidunt ante nibh sed risus. Fusce dictum sit amet quam vitae finibus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Phasellus venenatis ultricies odio. Donec vitae ante non ipsum vestibulum elementum ac sit amet leo. Quisque iaculis, tellus et imperdiet vestibulum, lectus libero mollis lacus, nec eleifend eros mauris in massa.</p>
 <p>Mauris efficitur eleifend nisl, vitae molestie sapien pretium at. Aliquam mollis blandit diam eget malesuada. Sed feugiat, est ut tincidunt gravida, leo ante hendrerit orci, quis consequat metus elit et turpis. Vivamus sed mi dapibus, feugiat arcu vehicula, tempor sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean non enim ex. Praesent pellentesque ultrices nulla, eu fermentum erat condimentum nec. Mauris et orci facilisis, tempor diam at, mattis nisi. Nullam in mattis nunc, nec sollicitudin lacus.</p>
@@ -170,53 +175,5 @@
         e.preventDefault()
         $('#actionbar-dropdown').toggleClass('show')
     })
-</script>
-
-<script>
-    let ctaInstallation = $('#cta-installation')
-    let butInstall = $('#butInstall')
-    let butIgnoreInstall = $('#butIgnoreInstall')
-    if ('serviceWorker' in navigator) {
-        window.addEventListener('load', function () {
-            navigator.serviceWorker.register('/sw.js').then(function (registration) {
-                
-            }, function (err) {
-                
-                console.log('ServiceWorker registration failed: ', err);
-            });
-        });
-    }
-
-
-    window.addEventListener('beforeinstallprompt', (event) => {
-        
-        window.deferredPrompt = event;
-        ctaInstallation.show()
-    });
-
-    butInstall.addEventListener('click', () => {
-        const promptEvent = window.deferredPrompt;
-        if (!promptEvent) {
-            
-            return;
-        }
-        
-        promptEvent.prompt();
-        
-        promptEvent.userChoice.then((result) => {
-            
-            
-            window.deferredPrompt = null;
-            
-            divInstall.classList.toggle('hidden', true);
-        });
-    });
-
-    butIgnoreInstall.addEventListener('click', ()=>{
-        window.deferredPrompt = null;
-    });
-    window.addEventListener('appinstalled', (event) => {
-        console.log('👍', 'appinstalled', event);
-    });
 </script></body>
 </html>
