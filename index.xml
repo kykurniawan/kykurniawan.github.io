@@ -6,7 +6,53 @@
     <description>Recent content on Rizky Kurniawan</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>id-ID</language>
-    <lastBuildDate>Sat, 09 Jan 2021 09:37:23 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 02 Feb 2021 04:23:12 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tentang Saya</title>
+      <link>https://rizkykurniawan.com/more/about-me/</link>
+      <pubDate>Tue, 02 Feb 2021 04:23:12 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/more/about-me/</guid>
+      <description>Halo, Saya Rizky Kurniawan, mahasiswa jurusan Teknik Informatika di Universitas Islam Kalimantan, Banjarmasin, Kalimantan Selatan.
+Saya berasal dari Desa Subur Indah, Kecamatan Katingan Kuala, Kabupaten Katingan, Kalimantan Tengah, dan saat ini sedang tinggal di Semangat Dalam, Kecamatan Alalak, Kabupaten Barito Kuala, Kalimantan Selatan.</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>https://rizkykurniawan.com/more/resume/</link>
+      <pubDate>Tue, 02 Feb 2021 04:02:25 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/more/resume/</guid>
+      <description>Ini isi halaman resume</description>
+    </item>
+    
+    <item>
+      <title>Curiculum Vitae</title>
+      <link>https://rizkykurniawan.com/more/curiculum-vitae/</link>
+      <pubDate>Tue, 02 Feb 2021 04:09:04 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/more/curiculum-vitae/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Random Quotes</title>
+      <link>https://rizkykurniawan.com/more/random-quotes/</link>
+      <pubDate>Tue, 02 Feb 2021 04:10:12 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/more/random-quotes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Download Library</title>
+      <link>https://rizkykurniawan.com/more/download-library/</link>
+      <pubDate>Tue, 02 Feb 2021 04:09:36 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.com/more/download-library/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Kontent Youtube Kesepuluh</title>
       <link>https://rizkykurniawan.com/ytcontents/kontent-youtube-kesepuluh/</link>
@@ -158,16 +204,6 @@
       
       <guid>https://rizkykurniawan.com/search/</guid>
       <description> </description>
-    </item>
-    
-    <item>
-      <title>Tentang Saya</title>
-      <link>https://rizkykurniawan.com/about/</link>
-      <pubDate>Thu, 10 Dec 2020 19:07:18 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.com/about/</guid>
-      <description>Halo, Saya Rizky Kurniawan, mahasiswa jurusan Teknik Informatika di Universitas Islam Kalimantan, Banjarmasin, Kalimantan Selatan.
-Saya berasal dari Desa Subur Indah, Kecamatan Katingan Kuala, Kabupaten Katingan, Kalimantan Tengah, dan saat ini sedang tinggal di Semangat Dalam, Kecamatan Alalak, Kabupaten Barito Kuala, Kalimantan Selatan.</description>
     </item>
     
   </channel>
