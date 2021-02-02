@@ -129,8 +129,8 @@
         $('#actionbar-dropdown').toggleClass('show')
     })
     function setBodyPadding() {
-        $('body').css('padding-top', $('#actionbar').css('height'));
-        $('body').css('padding-bottom', $('#bottom-navigation').css('height'));
+        $('body').css('padding-top', ($('#actionbar').css('height') ? $('#bottom-navigation').css('height') : 0));
+        $('body').css('padding-bottom', ($('#bottom-navigation').css('height') ? $('#bottom-navigation').css('height') : 0));
     }
 
     $(document).ready(function () {
