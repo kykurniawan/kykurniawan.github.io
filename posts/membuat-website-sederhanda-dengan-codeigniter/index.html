@@ -46,9 +46,9 @@
     .pagination .page-item .page-link{
         border:none !important;
     }
-</style><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
-        <div id="content">
-<nav class="bg-white py-3 fixed-top shadow-sm">
+</style><body class="bg-light">
+    <div id="content">
+<nav id="actionbar" class="bg-white py-3 fixed-top shadow-sm">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-start">
@@ -137,7 +137,7 @@
 </section>
 
 
-        </div><script src="/js/bootstrap.bundle.min.js"></script>
+    </div><script src="/js/bootstrap.bundle.min.js"></script>
 <script src="/js/prism.js"></script>
 
 <script>
@@ -145,5 +145,22 @@
         e.preventDefault()
         $('#actionbar-dropdown').toggleClass('show')
     })
+    function setBodyPadding() {
+        $('body').css('padding-top', $('#actionbar').css('height'));
+        $('body').css('padding-bottom', $('#bottom-navigation').css('height'));
+    }
+
+    $(document).ready(function () {
+        setBodyPadding();
+    })
+
+    $(window).scroll(function () {
+        setBodyPadding();
+    });
+
+    $(window).on('resize', function () {
+        setBodyPadding();
+    })
 </script></body>
+
 </html>

@@ -46,8 +46,8 @@
     .pagination .page-item .page-link{
         border:none !important;
     }
-</style><body class="bg-light"  style="padding-bottom: 50px; padding-top: 58px;">
-        <div id="content"><nav class="bg-white py-3 fixed-top shadow-sm">
+</style><body class="bg-light">
+    <div id="content"><nav id="actionbar" class="bg-white py-3 fixed-top shadow-sm">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-between">
@@ -214,7 +214,7 @@
             </div>
         </div>
     </div>
-</section><section class="mb-3">
+</section><section class="">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white py-3">
@@ -259,20 +259,6 @@
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white border-top py-2 d-flex justify-content-end">
                 <div class="text-teal small" role="button" onclick="window.location.href='/portfolios'">Lihat Semua Portofolio</div>
-            </div>
-        </div>
-    </div>
-</section><section id="cta-installation" style="display: none;">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-5 mx-auto bg-teal py-3">
-                <h6 class="text-light text-end mb-3 small">Akses lebih mudah?, Install rizkykurniawan.com di handphone kamu sekarang!</h6>
-                <div class="text-end">
-                    <button id="butInstall" role="button" type="button"
-                        class="btn btn-sm btn-danger rounded py-0">Install</button>
-                    <button id="butIgnoreInstall" role="button" type="button"
-                        class="btn btn-sm btn-light rounded py-0">Nggak Mau</button>
-                </div>
             </div>
         </div>
     </div>
@@ -348,7 +334,7 @@
         </div>
     </div>
 </nav>
-        </div><script src="/js/bootstrap.bundle.min.js"></script>
+    </div><script src="/js/bootstrap.bundle.min.js"></script>
 <script src="/js/prism.js"></script>
 
 <script>
@@ -356,5 +342,22 @@
         e.preventDefault()
         $('#actionbar-dropdown').toggleClass('show')
     })
+    function setBodyPadding() {
+        $('body').css('padding-top', $('#actionbar').css('height'));
+        $('body').css('padding-bottom', $('#bottom-navigation').css('height'));
+    }
+
+    $(document).ready(function () {
+        setBodyPadding();
+    })
+
+    $(window).scroll(function () {
+        setBodyPadding();
+    });
+
+    $(window).on('resize', function () {
+        setBodyPadding();
+    })
 </script></body>
+
 </html>
