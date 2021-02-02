@@ -40,7 +40,7 @@
     crossorigin="anonymous" />
 
 
-<script src="/js/jquery-3.5.1.min.js"></script>
+<script async src="/js/jquery-3.5.1.min.js"></script>
 
 <style>
     .pagination .page-item .page-link{
@@ -83,6 +83,8 @@
 
 
     </div><script src="/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="https://cdn.jsdelivr.net/npm/promise-polyfill"></script>
 <script src="/js/prism.js"></script>
 
 <script>
@@ -91,20 +93,32 @@
         $('#actionbar-dropdown').toggleClass('show')
     })
     function setBodyPadding() {
-        $('body').css('padding-top', ($('#actionbar').css('height') ? $('#bottom-navigation').css('height') : 0));
-        $('body').css('padding-bottom', ($('#bottom-navigation').css('height') ? $('#bottom-navigation').css('height') : 0));
+        $('body').css('padding-top', ($('#actionbar').css('height') ? $('#actionbar').css('height') : 0))
+        $('body').css('padding-bottom', ($('#bottom-navigation').css('height') ? $('#bottom-navigation').css('height') : 0))
     }
 
     $(document).ready(function () {
-        setBodyPadding();
+        setBodyPadding()
     })
 
     $(window).scroll(function () {
-        setBodyPadding();
-    });
+        setBodyPadding()
+    })
 
     $(window).on('resize', function () {
-        setBodyPadding();
+        setBodyPadding()
+    })
+
+    $('#shareButton').on('click', () => {
+        Swal.fire({
+            title: '<strong><small>Bagikan</small></strong>',
+            html:
+                '<a href="https://t.me/share/url?url=' + encodeURI(window.location.href) + '&text=Share-test" class="btn btn-sm"><i class="fab fa-telegram" style="font-size:24px"></i></a>',
+            showCloseButton: false,
+            showCancelButton: false,
+            showConfirmButton: false,
+            focusConfirm: false,
+        })
     })
 </script></body>
 
