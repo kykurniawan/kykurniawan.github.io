@@ -4,6 +4,9 @@ $(document).ready(function () {
     $('#searchBox').keyup(function () {
         search()
     });
+    $('#searchBox').on('change', () => {
+        search()
+    })
 });
 
 function search() {
