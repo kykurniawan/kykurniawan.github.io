@@ -43,9 +43,33 @@
 
 <script src="/js/jquery-3.5.1.min.js"></script>
 
+<script>
+    function back() {
+        var prevUrl = document.referrer
+        var baseUrl = 'https:\/\/rizkykurniawan.id\/'
+
+        if (prevUrl == '') {
+            window.location.href = baseUrl
+        } else {
+            if (prevUrl == window.location.href) {
+                window.history.back()
+            } else {
+                var url = prevUrl.split('//')
+                var protocol = url[0]
+                var prevHost = protocol + '//' + url[1].split('/')[0] + '/'
+                if (prevHost == baseUrl) {
+                    window.history.back()
+                } else {
+                    window.location.href = baseUrl
+                }
+            }
+        }
+    }
+</script>
+
 <style>
-    .pagination .page-item .page-link{
-        border:none !important;
+    .pagination .page-item .page-link {
+        border: none !important;
     }
 </style><body class="bg-light">
     <div id="content">
@@ -64,7 +88,7 @@
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-between">
                 <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
-                    onclick="window.history.back();" class="material-icons text-secondary">arrow_back</button>
+                    onclick="back()" class="material-icons text-secondary">arrow_back</button>
                 <div class="text-secondary text-center"
                     style="font-weight: bolder; overflow: hidden; white-space: nowrap;">Tag: Programing</div>
                 <div class="material-icons text-secondary" role="button" onclick="window.location.href='/search'">search
@@ -103,7 +127,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="/js/prism.js"></script>
 
-<script>
+<script defer>
     $('#actionbar-dropdown-button').on('click', function (e) {
         e.preventDefault()
         $('#actionbar-dropdown').toggleClass('show')
@@ -124,7 +148,7 @@
         setBodyPadding()
     })
 
-    function clearInput(id, focus=false){
+    function clearInput(id, focus = false) {
         document.getElementById(id).value = ''
         if (focus) {
             document.getElementById(id).focus()

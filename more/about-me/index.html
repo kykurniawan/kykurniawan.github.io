@@ -43,9 +43,33 @@
 
 <script src="/js/jquery-3.5.1.min.js"></script>
 
+<script>
+    function back() {
+        var prevUrl = document.referrer
+        var baseUrl = 'https:\/\/rizkykurniawan.id\/'
+
+        if (prevUrl == '') {
+            window.location.href = baseUrl
+        } else {
+            if (prevUrl == window.location.href) {
+                window.history.back()
+            } else {
+                var url = prevUrl.split('//')
+                var protocol = url[0]
+                var prevHost = protocol + '//' + url[1].split('/')[0] + '/'
+                if (prevHost == baseUrl) {
+                    window.history.back()
+                } else {
+                    window.location.href = baseUrl
+                }
+            }
+        }
+    }
+</script>
+
 <style>
-    .pagination .page-item .page-link{
-        border:none !important;
+    .pagination .page-item .page-link {
+        border: none !important;
     }
 </style><body class="bg-light">
     <div id="content">
@@ -62,7 +86,7 @@
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-between">
                 <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
-                    onclick="window.history.back();" class="material-icons text-secondary">arrow_back</button>
+                    onclick="back()" class="material-icons text-secondary">arrow_back</button>
                 <div class="text-secondary text-center"
                     style="font-weight: bolder; overflow: hidden; white-space: nowrap;">About Me</div>
                 <div class="material-icons text-secondary" role="button" onclick="window.location.href='/search'">search
@@ -76,20 +100,20 @@
             <div class="col-lg-5 mx-auto bg-light py-3">
                 <article class='' style="text-align: left;">
                     <h6 id="hello">Hello,</h6>
-<p>Saya Rizky Kurniawan, mahasiswa jurusan Teknik Informatika di Universitas Islam Kalimantan, Banjarmasin, Kalimantan Selatan.</p>
-<p>Saya berasal dari Desa Subur Indah, Kecamatan Katingan Kuala, Kabupaten Katingan, Kalimantan Tengah, dan saat ini sedang tinggal di Semangat Dalam, Kecamatan Alalak, Kabupaten Barito Kuala, Kalimantan Selatan.</p>
-<p>Saat ini menjadi pekerja lepas membuat website untuk <em>client</em>. Beberapa hasil website yang saya buat dapat anda temukan <a href="../../portfolios">di sini</a>.</p>
-<p>Selain menjadi pekerja lepas, kegiatan sehari - hari saya adalah mempelajari berbagai hal mengenai pemrograman khususnya tentang <em>backend development</em> untuk memperbaiki kekurangan saya dalam membuat program. Beberapa bahasa pemrograman yang biasa saya gunakan adalah seperti PHP, Python, dan Javascript. Beberapa framework/teknologi yang pernah saya gunakan adalah Codeigniter (PHP), Django (Python), dan NodeJS (Javascript).</p>
-<h6 id="sosial-media-saya">Sosial Media Saya</h6>
+<p>I am Rizky Kurniawan, student of Informatics Engineering at the Islamic University of Kalimantan, Banjarmasin, South Kalimantan.</p>
+<p>I come from &ldquo;Subur Indah&rdquo; Village, Katingan Kuala District, Katingan Regency, Central Kalimantan, and currently live in Semangat Dalam, Alalak District, Barito Kuala Regency, South Kalimantan.</p>
+<p>Currently working as a freelance worker creating websites for <em>clients</em>. Some of the websites that I have completed can be found <a href="../../portfolios">here</a>.</p>
+<p>Apart from being a freelance worker, my daily activities are learning various things about programming, especially about web backend development. Some of the programming languages ​​that I usually use are like PHP, Python, and Javascript. Some of the frameworks / technologies I&rsquo;ve used are Codeigniter (PHP), Django (Python), and NodeJS (Javascript).</p>
+<h6 id="visit-my-social-media">Visit my social media</h6>
 <ul>
 <li><a href="https://instagram.com/_sweet.scar/">Instagram</a></li>
 <li><a href="https://linkedin.com/in/kykurniawan/">LinkedIn</a></li>
 <li><a href="https://www.youtube.com/channel/UC4G--03ELkOXX-dcSq_LMQQ/">YouTube</a></li>
 <li><a href="https://github.com/kykurniawan">GitHub</a></li>
 </ul>
-<h6 id="hubungi-saya-melalui">Hubungi Saya Melalui</h6>
+<h6 id="my-contact-information">My contact information</h6>
 <ul>
-<li>Telepon: +6282256545404</li>
+<li>Phone: +6282256545404</li>
 <li>Email: <a href="mailto:me.rizkykurniawan@gmail.com">me.rizkykurniawan@gmail.com</a></li>
 </ul>
 
@@ -105,7 +129,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="/js/prism.js"></script>
 
-<script>
+<script defer>
     $('#actionbar-dropdown-button').on('click', function (e) {
         e.preventDefault()
         $('#actionbar-dropdown').toggleClass('show')
@@ -126,7 +150,7 @@
         setBodyPadding()
     })
 
-    function clearInput(id, focus=false){
+    function clearInput(id, focus = false) {
         document.getElementById(id).value = ''
         if (focus) {
             document.getElementById(id).focus()
