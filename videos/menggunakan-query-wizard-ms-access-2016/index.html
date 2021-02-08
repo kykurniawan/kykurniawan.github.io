@@ -62,13 +62,19 @@
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-start">
                 <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
-                    onclick="window.history.back();" class="material-icons text-secondary">arrow_back</button>
+                    onclick="back()" class="material-icons text-secondary">arrow_back</button>
                 <div class="text-secondary text-center"
                     style="font-weight: bolder; overflow: hidden; white-space: nowrap;">Menggunakan Query Wizard Ms Access 2016</div>
             </div>
         </div>
     </div>
-</nav><section class="mb-3">
+</nav>
+
+<script>
+    function back() {
+        console.log(window.history.back());
+    }
+</script><section class="mb-3">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto bg-white p-0">
