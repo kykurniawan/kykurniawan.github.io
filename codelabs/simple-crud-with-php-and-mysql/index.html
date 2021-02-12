@@ -141,9 +141,9 @@ $dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;co
 } <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">PDOException</span> $e) {
     <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> $e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getMessage</span>();
 }
-</code></pre></div><p>Setelah itu kita coba jalankan dengan cara pergi ke link project yang kita buat
-<strong>http://localhost/codelabs/simple_crud/config/database_connection.php</strong></p>
-<p>(<em><strong>Note: sesuaikan link dengan lokasi folder project yang kalian miliki</strong></em>)</p>
+</code></pre></div><p>Setelah itu kita coba jalankan dengan cara pergi ke link project yang kita buat</p>
+<pre><code>http://localhost/codelabs/simple_crud/config/database_connection.php
+</code></pre><p>(<em><strong>Note: sesuaikan link dengan lokasi folder project yang kalian miliki</strong></em>)</p>
 <p>Jika koneksi berhasil akan muncul seperti ini:
 <p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_success.png" class="shadow-sm img-fluid w-100" alt="db_connection_success"></p></p>
 <p>Namun, jika terdapat kesalahan dan koneksi database gagal akan muncul seperti ini:
@@ -173,7 +173,7 @@ $dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;co
 }
 </code></pre></div><p>kita akan membuat tampilan form sederhana untuk menginputkan data user.
 agar lebih mudah kita akan gunakan css framework <strong>Bootstrap</strong>.
-Dokumentasi tentang bootstrap dapat kalian temukan di <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">https://getbootstrap.com/docs/5.0/getting-started/introduction/</a></p>
+Dokumentasi tentang bootstrap dapat kalian temukan di <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">Sini</a></p>
 <p>Jika kalian bingung ikuti saya terlebih dahulu saja.</p>
 <p>buka file <strong>create_user.php</strong>, kemudian masukkan baris html seperti ini:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
