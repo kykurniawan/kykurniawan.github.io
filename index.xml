@@ -6,7 +6,7 @@
     <description>Recent content on RIZKY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 06 Feb 2021 01:24:20 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.id/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 10 Feb 2021 13:46:47 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.id/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>About Me</title>
       <link>https://rizkykurniawan.id/more/about-me/</link>
@@ -15,6 +15,25 @@
       <guid>https://rizkykurniawan.id/more/about-me/</guid>
       <description>Hello, I am Rizky Kurniawan, student of Informatics Engineering at the Islamic University of Kalimantan, Banjarmasin, South Kalimantan.
 I come from &amp;ldquo;Subur Indah&amp;rdquo; Village, Katingan Kuala District, Katingan Regency, Central Kalimantan, and currently live in Semangat Dalam, Alalak District, Barito Kuala Regency, South Kalimantan.</description>
+    </item>
+    
+    <item>
+      <title>Codelabs</title>
+      <link>https://rizkykurniawan.id/more/codelabs/</link>
+      <pubDate>Wed, 10 Feb 2021 13:46:47 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.id/more/codelabs/</guid>
+      <description>Codelabs provide a guided, tutorial, hands-on coding experience. Codelabs will step you through the process of building an example application.</description>
+    </item>
+    
+    <item>
+      <title>Membuat CRUD Sederhana dengan PHP dan MySQL</title>
+      <link>https://rizkykurniawan.id/codelabs/simple-crud-with-php-and-mysql/</link>
+      <pubDate>Wed, 10 Feb 2021 13:21:44 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.id/codelabs/simple-crud-with-php-and-mysql/</guid>
+      <description>Assalamualaikum wr.wb,
+Selamat datang di codelabs, kali ini kita akan belajar bagaimana cara mengkoneksikan database MySQL ke aplikasi PHP kita, dan melaukan operasi baca tulis ke dalam database yang kita miliki melalui aplikasi kita.</description>
     </item>
     
     <item>

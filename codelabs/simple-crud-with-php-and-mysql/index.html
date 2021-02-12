@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Membuat CRUD Sederhana dengan PHP dan MySQL</title>
+
+    
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/mystyle.css?v=1.1">
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-128.png" sizes="128x128" />
+    <meta name="author" content="Rizky Kurniawan" />
+    <meta name="application-name" content="&nbsp;" />
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
+        type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
+        crossorigin="anonymous" />
+
+    
+    <script src="/js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-teal">
+        <div class="container">
+            <a class="navbar-brand" href="/codelabs">Codelabs</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="/">Exit Codelabs</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav><section class="container py-3">
+    <h6 class="text-dark">Wednesday, Feb 10, 2021</h6>
+    <h1 style="margin-bottom: 0;">Membuat CRUD Sederhana dengan PHP dan MySQL</h1>
+    <hr>
+    <div style="font-size: 1.3rem;">
+        <article>
+            <p>Assalamualaikum wr.wb,</p>
+<p>Selamat datang di codelabs, kali ini kita akan belajar bagaimana cara mengkoneksikan database MySQL ke aplikasi PHP kita, dan melaukan operasi baca tulis ke dalam database yang kita miliki melalui aplikasi kita.</p>
+<p>Ada beberapa cara yang dapat kita gunakan untuk terhubung ke database menggunakan php. Yang paling umum yaitu menggunakan library <strong>mysqli</strong>, dan <strong>PDO</strong>. Lalu apa perbedaan antara keduanya?. Library mysqli hanya dapat kita gunakan untuk koneksi ke dalam database mysql, sedangkan library PDO dapat kita gunakan untuk koneksi ke berbagai jenis database.</p>
+<h4 id="berikut-ini-contoh-koneksi-database-dengan-menggunakan-mysqli-procedural">Berikut ini contoh koneksi database dengan menggunakan mysqli (procedural)</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span>;
+$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+
+<span style="color:#75715e">// Create connection
+</span><span style="color:#75715e"></span>$conn <span style="color:#f92672">=</span> <span style="color:#a6e22e">mysqli_connect</span>($servername, $username, $password);
+
+<span style="color:#75715e">// Check connection
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$conn) {
+    <span style="color:#66d9ef">die</span>(<span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> <span style="color:#a6e22e">mysqli_connect_error</span>());
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
+}
+</code></pre></div><h4 id="dan-berikut-ini-adalah-contoh-koneksi-database-dengan-menggunakan-pdo">Dan berikut ini adalah contoh koneksi database dengan menggunakan PDO</h4>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span>;
+$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;password&#34;</span>;
+
+<span style="color:#66d9ef">try</span> {
+    $conn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PDO</span>(<span style="color:#e6db74">&#34;mysql:host=</span><span style="color:#e6db74">$servername</span><span style="color:#e6db74">;dbname=myDB&#34;</span>, $username, $password);
+    <span style="color:#75715e">// set the PDO error mode to exception
+</span><span style="color:#75715e"></span>    $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setAttribute</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ATTR_ERRMODE</span>, <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ERRMODE_EXCEPTION</span>);
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
+} <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">PDOException</span> $e) {
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> $e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getMessage</span>();
+}
+</code></pre></div><h3 id="pertanyaanya-apa-yang-harus-kita-gunakan--mysqli-atau-pdo">Pertanyaanya, apa yang harus kita gunakan ? MySQLi atau PDO?</h3>
+<p>Jawaban singkatnya adalah apa saja yang ingin kita gunakan. Keduanya sama-sama memiliki kelebihan.
+Koneksi dengan PDO dapat digunakan pada 12 jenis database yang berbeda, sedangkan MySQLi hanya bisa digunakan untuk koneksi ke dalam database SQL.</p>
+<p>jadi jika kita ingin berganti database pada projek yang dibuat, koneksi dengan PDO membuatnya menjadi lebih mudah. Kita hanya akan diharuskan untuk merubah <em>connection string</em> dan beberapa query. Tetapi dengan MySQLi, kita harus menulis ulang seluruh kode termasuk query-nya.</p>
+<p>PDO dan MySQLi mendukung pemrograman berorientasi objek, tetapi MySQLi juga dapat digunakan secara procedural.
+Keduanya juga telah mendukung <em>prepared statement</em>. Ini berfungsi untuk melindungi aplikasi dari upaya <em>SQL Injection</em>, dan sangat penting dalam keamanan aplikasi website.</p>
+<h2 id="lets-coding">Let&rsquo;s Coding!!</h2>
+<p>Agar lebih mudah memahaminya, kita akan praktekan langsung pada komputer kita.</p>
+<h4 id="1-membuat-database">1. Membuat database</h4>
+<p>Kita akan menggunakan bantuan phpmyadmin yang ada pada xampp untuk membuat database mysql kita. (saya anggap xampp telah terinstall di komputer kalian).</p>
+<p>aktifkan apache dan mysql server melalui xampp control panel</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/xampp.png" class="img-fluid w-100" alt="xampp"></p>
+<p>pergi ke phpmyadmin di browser kalian, kemudian buat database baru dengan nama <strong>codelabs_crud</strong>, setelah itu buat tabel <strong>users</strong> dengan struktur sebagai berikut:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/users_table.png" class="img-fluid w-100" alt="users_table"></p>
+<p>kalian dapat menggunakan sql yang ada di bawah ini atau membuatnya secara manual melalui interface yang diberikan oleh phpmyadmin</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>codelabs_crud<span style="color:#f92672">`</span>.<span style="color:#f92672">`</span>users<span style="color:#f92672">`</span> ( <span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> INT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> AUTO_INCREMENT , <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#f92672">`</span>email<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#f92672">`</span>password<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>)) ENGINE <span style="color:#f92672">=</span> InnoDB;
+</code></pre></div><hr>
+<h4 id="2-folder-dan-file-project">2. Folder dan file project</h4>
+<p>Setelah membuat database silahkan buat folder dengan nama <strong>simple_crud</strong> di dalam folder htdocs milik xampp kemudian buat beberapa file dan folder di dalamnya dengan struktur seperti ini:</p>
+<p><em>biarkan filenya kosong untuk saat ini</em></p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/folder_structure.png" class="img-fluid w-100" alt="folder_structure"></p>
+<h4 id="3-koneksi-ke-database">3. Koneksi ke database</h4>
+<p>Setelah struktur folder dibuat langkah selanjutnya kita akan mengkoneksikan projek kita dengan database yang tadi sudah kita buat.</p>
+<p>Untuk koneksi di ini kita akan menggunakan library PDO terlebih dahulu saja</p>
+<p>Buka file database_connection.php yang ada di <strong>config/database_connection.php</strong></p>
+<p>Kemudian tuliskan kode seperti di bawah ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+$dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;codelabs_crud&#34;</span>;
+
+<span style="color:#66d9ef">try</span> {
+    $conn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PDO</span>(<span style="color:#e6db74">&#34;mysql:host=</span><span style="color:#e6db74">$servername</span><span style="color:#e6db74">;dbname=</span><span style="color:#e6db74">$dbname</span><span style="color:#e6db74">&#34;</span>, $username, $password);
+    <span style="color:#75715e">// set the PDO error mode to exception
+</span><span style="color:#75715e"></span>    $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setAttribute</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ATTR_ERRMODE</span>, <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ERRMODE_EXCEPTION</span>);
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
+} <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">PDOException</span> $e) {
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> $e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getMessage</span>();
+}
+</code></pre></div><p>Setelah itu kita coba jalankan dengan cara pergi ke link project yang kita buat
+<strong>http://localhost/codelabs/simple_crud/config/database_connection.php</strong></p>
+<p>(<em><strong>Note: sesuaikan link dengan lokasi folder project yang kalian miliki</strong></em>)</p>
+<p>Jika koneksi berhasil akan muncul seperti ini:
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_success.png" class="shadow-sm img-fluid w-100" alt="db_connection_success"></p></p>
+<p>Namun, jika terdapat kesalahan dan koneksi database gagal akan muncul seperti ini:
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_failed.png" class="shadow-sm img-fluid w-100" alt="db_connection_failed"></p></p>
+<p>Perhatikan pesan errornya</p>
+<p><em><strong>Unknown database &lsquo;codelabs_cruds&rsquo;</strong></em> berarti program kita tidak bisa menemukan database dengan nama codelabs_cruds karena nama database yang kita miliki adalah <strong>&lsquo;codelabs_crud&rsquo; (tanpa huruf &ldquo;s&rdquo; di akhir)</strong></p>
+<p>ini hanya sebagai contoh saja, pesan error yang kalian dapatkan mungkin saja berbeda dan itu berarti error yang berbeda pula, perbanyaklah berlatih untuk membaca dan memahami pesan error.</p>
+<h4 id="4-create-data-user">4. Create data user</h4>
+<p>Setelah berhasil mengkoneksikan database, kali ini kita akan mencoba untuk melakukan operasi baca tulis data ke dalam database yang kita miliki. Pertama kita akan membuat fitur tambah data. Tapi sebelum itu, buka kembali file <strong>config/database_connection.php</strong>, kemudian ganti baris kode yang ada dibawah ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
+</code></pre></div><p>menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$db <span style="color:#f92672">=</span> $conn;
+</code></pre></div><p>sehingga keseluruhan kode di dalam file <strong>config/database_connection.php</strong> menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+$servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
+$username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;root&#34;</span>;
+$password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;&#34;</span>;
+$dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;codelabs_cruds&#34;</span>;
+
+<span style="color:#66d9ef">try</span> {
+    $conn <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PDO</span>(<span style="color:#e6db74">&#34;mysql:host=</span><span style="color:#e6db74">$servername</span><span style="color:#e6db74">;dbname=</span><span style="color:#e6db74">$dbname</span><span style="color:#e6db74">&#34;</span>, $username, $password);
+    <span style="color:#75715e">// set the PDO error mode to exception
+</span><span style="color:#75715e"></span>    $conn<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">setAttribute</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ATTR_ERRMODE</span>, <span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">ERRMODE_EXCEPTION</span>);
+    $db <span style="color:#f92672">=</span> $conn;
+} <span style="color:#66d9ef">catch</span>(<span style="color:#a6e22e">PDOException</span> $e) {
+    <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connection failed: &#34;</span> <span style="color:#f92672">.</span> $e<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">getMessage</span>();
+}
+</code></pre></div><p>kita akan membuat tampilan form sederhana untuk menginputkan data user.
+agar lebih mudah kita akan gunakan css framework <strong>Bootstrap</strong>.
+Dokumentasi tentang bootstrap dapat kalian temukan di <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/">https://getbootstrap.com/docs/5.0/getting-started/introduction/</a></p>
+<p>Jika kalian bingung ikuti saya terlebih dahulu saja.</p>
+<p>buka file <strong>create_user.php</strong>, kemudian masukkan baris html seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+
+    &lt;<span style="color:#f92672">title</span>&gt;Codelabs | Simple CRUD&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar navbar-expand-lg navbar-dark bg-success&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-brand&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.php&#34;</span>&gt;Simple CRUD&lt;/<span style="color:#f92672">a</span>&gt;
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-toggler&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-bs-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collapse&#34;</span> <span style="color:#a6e22e">data-bs-target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#navbarNavAltMarkup&#34;</span> <span style="color:#a6e22e">aria-controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarNavAltMarkup&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Toggle navigation&#34;</span>&gt;
+                &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-toggler-icon&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+            &lt;/<span style="color:#f92672">button</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collapse navbar-collapse&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarNavAltMarkup&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.php&#34;</span>&gt;List User&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./create_user.php&#34;</span>&gt;Create User&lt;/<span style="color:#f92672">a</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">nav</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-5&#34;</span>&gt;
+        &lt;<span style="color:#f92672">h2</span>&gt;Tambah Data User&lt;/<span style="color:#f92672">h2</span>&gt;
+        &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nama&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;Nama&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nama&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nama&#34;</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;Email&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;Password&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;Simpan&lt;/<span style="color:#f92672">button</span>&gt;
+        &lt;/<span style="color:#f92672">form</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div>
+        </article>
+    </div>
+</section><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
