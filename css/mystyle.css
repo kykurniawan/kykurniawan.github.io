@@ -87,3 +87,9 @@ img[src*="#w50"] {
     width: 50%;
     height: auto;
 }
+
+blockquote {
+    border-left: 7px solid darkgray;
+    padding: 15px 10px 1px 10px;
+    background-color: rgb(240, 240, 240);
+}

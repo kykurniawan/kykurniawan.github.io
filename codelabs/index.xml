@@ -13,8 +13,9 @@
       <pubDate>Wed, 10 Feb 2021 13:21:44 +0800</pubDate>
       
       <guid>https://rizkykurniawan.id/codelabs/simple-crud-with-php-and-mysql/</guid>
-      <description>Assalamualaikum wr.wb,
-Selamat datang di codelabs, kali ini kita akan belajar bagaimana cara mengkoneksikan database MySQL ke aplikasi PHP kita, dan melaukan operasi baca tulis ke dalam database yang kita miliki melalui aplikasi kita.</description>
+      <description>Dilarang copy-paste kode di dalam codelabs ini kecuali hanya untuk tujuan efisiensi waktu.
+ Assalamualaikum wr.wb,
+Saya Rizky Kurniawan, Selamat datang di codelabs, kali ini kita akan belajar bagaimana cara mengkoneksikan database MySQL ke aplikasi PHP kita, dan melakukan operasi baca tulis ke dalam database yang kita miliki melalui aplikasi kita.</description>
     </item>
     
   </channel>

@@ -10,7 +10,7 @@
 
     
     <link rel="stylesheet" href="/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/mystyle.css?v=1.1">
+    <link rel="stylesheet" href="/css/mystyle.css?v=1.3">
     <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -33,14 +33,11 @@
     <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
     <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
     
-    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
-        type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet" type="text/css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
 
     
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-        integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA=="
-        crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
 
     
     <script src="/js/jquery-3.5.1.min.js"></script>
@@ -48,7 +45,7 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-teal">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-teal sticky-top">
         <div class="container">
             <a class="navbar-brand" href="/codelabs">Codelabs</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -67,12 +64,15 @@
     <h6 class="text-dark">Wednesday, Feb 10, 2021</h6>
     <h1 style="margin-bottom: 0;">Membuat CRUD Sederhana dengan PHP dan MySQL</h1>
     <hr>
-    <div style="font-size: 1.3rem;">
+    <div style="font-size: 1.2rem;" class="mb-4">
         <article>
-            <p>Assalamualaikum wr.wb,</p>
-<p>Selamat datang di codelabs, kali ini kita akan belajar bagaimana cara mengkoneksikan database MySQL ke aplikasi PHP kita, dan melaukan operasi baca tulis ke dalam database yang kita miliki melalui aplikasi kita.</p>
-<p>Ada beberapa cara yang dapat kita gunakan untuk terhubung ke database menggunakan php. Yang paling umum yaitu menggunakan library <strong>mysqli</strong>, dan <strong>PDO</strong>. Lalu apa perbedaan antara keduanya?. Library mysqli hanya dapat kita gunakan untuk koneksi ke dalam database mysql, sedangkan library PDO dapat kita gunakan untuk koneksi ke berbagai jenis database.</p>
-<h4 id="berikut-ini-contoh-koneksi-database-dengan-menggunakan-mysqli-procedural">Berikut ini contoh koneksi database dengan menggunakan mysqli (procedural)</h4>
+            <blockquote>
+<p>Dilarang copy-paste kode di dalam codelabs ini kecuali hanya untuk tujuan efisiensi waktu.</p>
+</blockquote>
+<p>Assalamualaikum wr.wb,</p>
+<p>Saya Rizky Kurniawan, Selamat datang di codelabs, kali ini kita akan belajar bagaimana cara mengkoneksikan database MySQL ke aplikasi PHP kita, dan melakukan operasi baca tulis ke dalam database yang kita miliki melalui aplikasi kita.</p>
+<p>Ada beberapa cara yang dapat kita gunakan untuk terhubung ke database menggunakan php. Yang paling umum yaitu menggunakan library <strong>MySQLi</strong>, dan <strong>PDO</strong>. Lalu apa perbedaan antara keduanya?. Library MySQLi hanya dapat kita gunakan untuk koneksi ke dalam database mysql, sedangkan library PDO dapat kita gunakan untuk koneksi ke berbagai jenis database.</p>
+<h5 id="berikut-ini-contoh-koneksi-database-dengan-menggunakan-mysqli-procedural">Berikut ini contoh koneksi database dengan menggunakan MySQLi (procedural)</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
 $username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span>;
@@ -87,7 +87,7 @@ $password <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;
 } <span style="color:#66d9ef">else</span> {
     <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
 }
-</code></pre></div><h4 id="dan-berikut-ini-adalah-contoh-koneksi-database-dengan-menggunakan-pdo">Dan berikut ini adalah contoh koneksi database dengan menggunakan PDO</h4>
+</code></pre></div><h5 id="dan-berikut-ini-adalah-contoh-koneksi-database-dengan-menggunakan-pdo">Dan berikut ini adalah contoh koneksi database dengan menggunakan PDO</h5>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
 $username <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;username&#34;</span>;
@@ -112,16 +112,18 @@ Keduanya juga telah mendukung <em>prepared statement</em>. Ini berfungsi untuk m
 <h4 id="1-membuat-database">1. Membuat database</h4>
 <p>Kita akan menggunakan bantuan phpmyadmin yang ada pada xampp untuk membuat database mysql kita. (saya anggap xampp telah terinstall di komputer kalian).</p>
 <p>aktifkan apache dan mysql server melalui xampp control panel</p>
-<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/xampp.png" class="img-fluid w-100" alt="xampp"></p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/xampp.png" class="img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/xampp.png"></p>
 <p>pergi ke phpmyadmin di browser kalian, kemudian buat database baru dengan nama <strong>codelabs_crud</strong>, setelah itu buat tabel <strong>users</strong> dengan struktur sebagai berikut:</p>
-<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/users_table.png" class="img-fluid w-100" alt="users_table"></p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/users_table.png" class="img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/users_table.png"></p>
 <p>kalian dapat menggunakan sql yang ada di bawah ini atau membuatnya secara manual melalui interface yang diberikan oleh phpmyadmin</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL"><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>codelabs_crud<span style="color:#f92672">`</span>.<span style="color:#f92672">`</span>users<span style="color:#f92672">`</span> ( <span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> INT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> AUTO_INCREMENT , <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#f92672">`</span>email<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#f92672">`</span>password<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>)) ENGINE <span style="color:#f92672">=</span> InnoDB;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-SQL" data-lang="SQL">
+<span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">TABLE</span> <span style="color:#f92672">`</span>codelabs_crud<span style="color:#f92672">`</span>.<span style="color:#f92672">`</span>users<span style="color:#f92672">`</span> ( <span style="color:#f92672">`</span>id<span style="color:#f92672">`</span> INT <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> AUTO_INCREMENT , <span style="color:#f92672">`</span>name<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#f92672">`</span>email<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#f92672">`</span>password<span style="color:#f92672">`</span> VARCHAR(<span style="color:#ae81ff">128</span>) <span style="color:#66d9ef">NOT</span> <span style="color:#66d9ef">NULL</span> , <span style="color:#66d9ef">PRIMARY</span> <span style="color:#66d9ef">KEY</span> (<span style="color:#f92672">`</span>id<span style="color:#f92672">`</span>)) ENGINE <span style="color:#f92672">=</span> InnoDB;
+
 </code></pre></div><hr>
 <h4 id="2-folder-dan-file-project">2. Folder dan file project</h4>
 <p>Setelah membuat database silahkan buat folder dengan nama <strong>simple_crud</strong> di dalam folder htdocs milik xampp kemudian buat beberapa file dan folder di dalamnya dengan struktur seperti ini:</p>
 <p><em>biarkan filenya kosong untuk saat ini</em></p>
-<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/folder_structure.png" class="img-fluid w-100" alt="folder_structure"></p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/folder_structure.png" class="img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/folder_structure.png"></p>
 <h4 id="3-koneksi-ke-database">3. Koneksi ke database</h4>
 <p>Setelah struktur folder dibuat langkah selanjutnya kita akan mengkoneksikan projek kita dengan database yang tadi sudah kita buat.</p>
 <p>Untuk koneksi di ini kita akan menggunakan library PDO terlebih dahulu saja</p>
@@ -145,17 +147,21 @@ $dbname <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;co
 <pre><code>http://localhost/codelabs/simple_crud/config/database_connection.php
 </code></pre><p>(<em><strong>Note: sesuaikan link dengan lokasi folder project yang kalian miliki</strong></em>)</p>
 <p>Jika koneksi berhasil akan muncul seperti ini:
-<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_success.png" class="shadow-sm img-fluid w-100" alt="db_connection_success"></p></p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_success.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_success.png"></p></p>
 <p>Namun, jika terdapat kesalahan dan koneksi database gagal akan muncul seperti ini:
-<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_failed.png" class="shadow-sm img-fluid w-100" alt="db_connection_failed"></p></p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_failed.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/db_connection_failed.png"></p></p>
 <p>Perhatikan pesan errornya</p>
 <p><em><strong>Unknown database &lsquo;codelabs_cruds&rsquo;</strong></em> berarti program kita tidak bisa menemukan database dengan nama codelabs_cruds karena nama database yang kita miliki adalah <strong>&lsquo;codelabs_crud&rsquo; (tanpa huruf &ldquo;s&rdquo; di akhir)</strong></p>
 <p>ini hanya sebagai contoh saja, pesan error yang kalian dapatkan mungkin saja berbeda dan itu berarti error yang berbeda pula, perbanyaklah berlatih untuk membaca dan memahami pesan error.</p>
 <h4 id="4-create-data-user">4. Create data user</h4>
 <p>Setelah berhasil mengkoneksikan database, kali ini kita akan mencoba untuk melakukan operasi baca tulis data ke dalam database yang kita miliki. Pertama kita akan membuat fitur tambah data. Tapi sebelum itu, buka kembali file <strong>config/database_connection.php</strong>, kemudian ganti baris kode yang ada dibawah ini:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;Connected successfully&#34;</span>;
+
 </code></pre></div><p>menjadi seperti ini:</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$db <span style="color:#f92672">=</span> $conn;
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+$db <span style="color:#f92672">=</span> $conn;
+
 </code></pre></div><p>sehingga keseluruhan kode di dalam file <strong>config/database_connection.php</strong> menjadi seperti ini:</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 $servername <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;localhost&#34;</span>;
@@ -205,8 +211,8 @@ Dokumentasi tentang bootstrap dapat kalian temukan di <a href="https://getbootst
         &lt;<span style="color:#f92672">h2</span>&gt;Tambah Data User&lt;/<span style="color:#f92672">h2</span>&gt;
         &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
             &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
-                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nama&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;Nama&lt;/<span style="color:#f92672">label</span>&gt;
-                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nama&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nama&#34;</span>&gt;
+                &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;Nama&lt;/<span style="color:#f92672">label</span>&gt;
+                &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
             &lt;/<span style="color:#f92672">div</span>&gt;
             &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
                 &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;Email&lt;/<span style="color:#f92672">label</span>&gt;
@@ -223,9 +229,884 @@ Dokumentasi tentang bootstrap dapat kalian temukan di <a href="https://getbootst
 &lt;/<span style="color:#f92672">body</span>&gt;
 
 &lt;/<span style="color:#f92672">html</span>&gt;
-</code></pre></div>
+</code></pre></div><p>Cek hasilnya di browser dengan pergi ke link</p>
+<pre><code>http://localhost/codelabs/simple_crud/create_user.php
+</code></pre><p><em>(Note: sesuaikan link dengan lokasi folder project yang kalian miliki)</em></p>
+<p>Hasilnya akan menjadi seperti ini</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/create_user_ui.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/create_user_ui.png"></p>
+<p>Sip, tampilan aplikasi sederhana kita sudah berhasil dibuat. Namun, ada beberapa hal yang harus diperbaiki. Jika kalian perhatikan kembali struktur project yang kita buat, kita memiliki beberapa file seperti delete_user.php, index.php, dan update_user.php.
+Semua file tersebut nantinya akan memiliki struktur html yang sama seperti file create_user.php, khususnya pada bagian head (kepala) dan foot (kaki). Agar kita tidak harus menuliskan kode yang sama pada setiap file kita akan membuat template untuk aplikasi kita.</p>
+<p>Pertama, buka kembali file <strong>create_user.php</strong>, kemudian potong (cut) kode html mulai dari tag penutup <code>&lt;/nav&gt;</code> hingga baris paling atas <code>&lt;html lang=&quot;en&quot;&gt;</code> dan tempel (paste) ke dalam file <strong>template/head.php</strong> sehingga file <strong>template/head.php</strong> akan menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">html</span> <span style="color:#a6e22e">lang</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;en&#34;</span>&gt;
+
+&lt;<span style="color:#f92672">head</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">charset</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;utf-8&#34;</span>&gt;
+    &lt;<span style="color:#f92672">meta</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;viewport&#34;</span> <span style="color:#a6e22e">content</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;width=device-width, initial-scale=1&#34;</span>&gt;
+    &lt;<span style="color:#f92672">link</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css&#34;</span> <span style="color:#a6e22e">rel</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;stylesheet&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;
+
+    &lt;<span style="color:#f92672">title</span>&gt;Codelabs | Simple CRUD&lt;/<span style="color:#f92672">title</span>&gt;
+&lt;/<span style="color:#f92672">head</span>&gt;
+
+&lt;<span style="color:#f92672">body</span>&gt;
+    &lt;<span style="color:#f92672">nav</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar navbar-expand-lg navbar-dark bg-success&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container&#34;</span>&gt;
+            &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-brand&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.php&#34;</span>&gt;Simple CRUD&lt;/<span style="color:#f92672">a</span>&gt;
+            &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-toggler&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;button&#34;</span> <span style="color:#a6e22e">data-bs-toggle</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collapse&#34;</span> <span style="color:#a6e22e">data-bs-target</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;#navbarNavAltMarkup&#34;</span> <span style="color:#a6e22e">aria-controls</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarNavAltMarkup&#34;</span> <span style="color:#a6e22e">aria-expanded</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;false&#34;</span> <span style="color:#a6e22e">aria-label</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;Toggle navigation&#34;</span>&gt;
+                &lt;<span style="color:#f92672">span</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-toggler-icon&#34;</span>&gt;&lt;/<span style="color:#f92672">span</span>&gt;
+            &lt;/<span style="color:#f92672">button</span>&gt;
+            &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;collapse navbar-collapse&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbarNavAltMarkup&#34;</span>&gt;
+                &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;navbar-nav&#34;</span>&gt;
+                    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.php&#34;</span>&gt;List User&lt;/<span style="color:#f92672">a</span>&gt;
+                    &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;nav-link&#34;</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./create_user.php&#34;</span>&gt;Create User&lt;/<span style="color:#f92672">a</span>&gt;
+                &lt;/<span style="color:#f92672">div</span>&gt;
+            &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;/<span style="color:#f92672">nav</span>&gt;
+</code></pre></div><p>Setelah itu, buka kembali file <strong>create_user.php</strong> dan potong kode html mulai dari tag pembuka <code>&lt;script&gt;</code> sampai baris paling bawah <code>&lt;/html&gt;</code> dan tempel ke dalam file <strong>template/foot.php</strong>, sehingga file <strong>template/foot.php</strong> akan menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">script</span> <span style="color:#a6e22e">src</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js&#34;</span> <span style="color:#a6e22e">integrity</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0&#34;</span> <span style="color:#a6e22e">crossorigin</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;anonymous&#34;</span>&gt;&lt;/<span style="color:#f92672">script</span>&gt;
+&lt;/<span style="color:#f92672">body</span>&gt;
+
+&lt;/<span style="color:#f92672">html</span>&gt;
+</code></pre></div><p>Setelah itu, tambahkan kode</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>pada baris teratas file <strong>create_user.php</strong>,
+dan tambahkan kode</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>pada baris paling bawah file <strong>create_user.php</strong> sehingga file <strong>create_user.php</strong> menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-5&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Tambah</span> <span style="color:#a6e22e">Data</span> <span style="color:#a6e22e">User</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">Simpan</span>&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Jika selesai, pastikan tampilan aplikasi kita masih sama seperti sebelumnya.</p>
+<p>Baik kita akan mulai bermain dengan data kali ini.</p>
+<p>Pertama kita akan menangkap data yang kita kirimkan dari form. Pastikan kalian menggunakan metode <strong>POST</strong> seperti ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+
+</code></pre></div><p>Lalu apa itu metode POST??</p>
+<p>POST merupakan salah satu http request yang biasanya digunakan untuk mengirimkan data ke dalam backend (untuk saat ini anggap saja server). Ada beberapa jenis http request yang sering digunakan sebagai berikut:</p>
+<ul>
+<li>GET = Digunakan untuk mengirimkan permintaan data</li>
+<li>POST = Digunakan untuk mengirimkan data</li>
+<li>PUT/PATCH = Digunakan untuk mengirimkan permintaan memodifikasi data yang sudah ada (contoh update data user)</li>
+<li>DELETE = Digunakan untuk mengirimkan permintaan hapus data</li>
+</ul>
+<p>Baik kembali lagi ke bagian form, pastikan juga setiap input yang ada di dalam form kita memiliki atribut <strong>name</strong>. Contoh nya seperti ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
+
+</code></pre></div><p>Pada contoh diatas input email memiliki atribut name=&ldquo;email&rdquo;, nama email ini akan kita gunakan untuk mengambil datanya ketika kita mengirimkan data melalui form, oleh karena itu atribut name tidak boleh memiliki nilai yang sama karena akan mempengaruhi proses pengambilan data.</p>
+<p>setelah yakin semuanya sudah siap, pergi ke baris paling atas di bawah baris kode <code>include(&quot;./template/head.php&quot;);</code> pada file <strong>create_user.php</strong>, kemudian tambahkan kode php seperti ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$errors <span style="color:#f92672">=</span> []; <span style="color:#75715e">// varioabel yang akan digunakan untuk menampung pesan error validasi
+</span><span style="color:#75715e"></span>
+<span style="color:#75715e">// script kode ini hanya akan dieksekusi jika kita melakukan submit form
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_POST)) {
+    
+    <span style="color:#75715e">// ambil data yang dikirimkan melalui form dan simpan ke dalam variabel
+</span><span style="color:#75715e"></span>    $name <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;name&#39;</span>];
+    $email <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;email&#39;</span>];
+    $password <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;password&#39;</span>];
+
+    <span style="color:#75715e">// lakukan validasi untuk tiap inputan, jika inputan kosong maka tambahkan pesan error kedalam variabel $errors
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> ($name <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        $errors[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nama tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> ($email <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        $errors[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> ($password <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        $errors[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Password tidak boleh kosong&#34;</span>;
+    }
+}
+</code></pre></div><p>setelah itu arahkan kursor ke bawah baris <code>&lt;h2&gt;Tambah Data User&lt;/h2&gt;</code> kemudian tambahkan kode berikut ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">$errors</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$error</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert bg-danger&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert&#34;</span>&gt;
+        <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$error</span> <span style="color:#f92672">?&gt;</span>
+    &lt;/<span style="color:#f92672">div</span>&gt;
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>pada kode diatas, kita mengambil data dari form dan menyimpannya ke dalam variabel kemudian melakukan validasi untuk input kosong.
+validasi sangat penting dalam proses menyimpan data ke dalam database. Pada kasus lain, validasi tidak hanya digunakan untuk menguji inputan yang kosong tetapi juga digunakan untuk memastikan data yang dikirmkan oleh pengguna melalui form benar-benar aman untuk disimpan dan tidak akan merusak sistem.</p>
+<p>Baik, kita lanjutkan pada proses penyimpanan data.</p>
+<p>Masih pada file yang sama (create_user.php), tambahkan kode seperti ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+</code></pre></div><p>di bawah kode <code>include('./template/head.php');</code> intuk menghubungkan file php kita dengan database.</p>
+<p>Kemudian buat fungsi <strong>isEmailAvailable()</strong> di bawahnya</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isEmailAvailable</span>($db, $email){
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE email=&#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;&#34;</span>;
+    <span style="color:#66d9ef">return</span> ($db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetchAll</span>() <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>);
+}
+</code></pre></div><p>fungsi ini digunakan untuk cek apakah email yang diinputkan ada di dalam database atau tidak. Jika email tidak ada, fungsi ini akan mengembalikan nilai <code>true</code> dan jika email sudah ada maka akan mengembalikan nilai <code>false</code>.</p>
+<p>Pergi ke bagian bawah baris dari kode ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> ($password <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+    $errors[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Password tidak boleh kosong&#34;</span>;
+}
+</code></pre></div><p>setelah itu masukkan kode berikut:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#75715e">// cek jika tidak ada error maka lakukan proses penyimpanan data
+</span><span style="color:#75715e"></span><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$errors) {
+    <span style="color:#75715e">// cek duplikasi data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isEmailAvailable</span>($db, $email)) {
+        <span style="color:#75715e">// hash password untuk keamanan
+</span><span style="color:#75715e"></span>        $password <span style="color:#f92672">=</span> <span style="color:#a6e22e">password_hash</span>($password, <span style="color:#a6e22e">PASSWORD_DEFAULT</span>);
+        <span style="color:#75715e">// buat sql
+</span><span style="color:#75715e"></span>        $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO users (name, email, password) VALUES (&#39;</span><span style="color:#e6db74">$name</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;, &#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39;)&#34;</span>;
+        <span style="color:#75715e">// simpan data
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> ($db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>($sql)) {
+            <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil disimpan&#39;);&lt;/script&gt;&#34;</span>;
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal menyimpan data&#39;);&lt;/script&gt;&#34;</span>;
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+        }
+    } <span style="color:#66d9ef">else</span> {
+        $errors[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email &#34;</span> <span style="color:#f92672">.</span> $email <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34; sudah digunakan&#34;</span>;
+    }
+}
+</code></pre></div><p>Pada kode ini kita periksa terlebih dahulu apakah ada error yang terjadi, jika tidak, kita periksa kembali untuk duplikasi email menggunakan fungsi <code>isEmailAvailable($db, $email);</code>. Jika email tersedia, kita akan menyimpan datanya. Pertama kita lakukan <em>password hashing</em> untuk mengamankan password, kemudian kita buat perintah sql untuk menyimpan data, lalu mengeksekusi sql tersebut. Sebuah alert akan dijakankan untuk mengetahui apakah data berhasil disimpan atau tidak.
+Setelah proses ini selesai maka halaman akan dialihkan ke link index.php (halaman untuk menampilkan data user, kita belum membuatnya untuk saat ini).</p>
+<hr>
+<blockquote>
+<p><em><strong>Catatan:</strong></em> <em>Password hashing adalah proses merubah password menjadi karakter acak dengan jumlah dan algoritma tertentu. Password yang telah dirubah tersebut tidak dapat dikembalikan ke bentuk semula lagi, dan hanya bisa dikomparasikan (comparing) menggunakan algoritma yang sesuai untuk memeriksa apakah password yang dimasukkan saat login adalah password yang benar.</em></p>
+</blockquote>
+<hr>
+<p>Baik, sejauh ini keseluruhan dari file <strong>create_user.php</strong> akan terlihat seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isEmailAvailable</span>(<span style="color:#a6e22e">$db</span>, <span style="color:#a6e22e">$email</span>){
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE email=&#39;$email&#39;&#34;</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetchAll</span>() <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>;
+}
+
+<span style="color:#a6e22e">$errors</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">// varioabel yang akan digunakan untuk menampung pesan error validasi
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">empty</span>(<span style="color:#a6e22e">$_POST</span>)) {
+    
+    <span style="color:#75715e">// ambil data yang dikirimkan melalui form dan simpan ke dalam variabel
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">$name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;name&#39;</span>];
+    <span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;email&#39;</span>];
+    <span style="color:#a6e22e">$password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;password&#39;</span>];
+
+    <span style="color:#75715e">// lakukan validasi untuk tiap inputan, jika inputan kosong maka tambahkan pesan error kedalam variabel $errors
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$name</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nama tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$email</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$password</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Password tidak boleh kosong&#34;</span>;
+    }
+
+    <span style="color:#75715e">// cek jika tidak ada error maka lakukan proses penyimpanan data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">$errors</span>) {
+        <span style="color:#75715e">// cek duplikasi data
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isEmailAvailable</span>(<span style="color:#a6e22e">$db</span>, <span style="color:#a6e22e">$email</span>)) {
+            <span style="color:#75715e">// hash password untuk keamanan
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">$password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">password_hash</span>(<span style="color:#a6e22e">$password</span>, <span style="color:#a6e22e">PASSWORD_DEFAULT</span>);
+            <span style="color:#75715e">// buat sql
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO users (name, email, password) VALUES (&#39;$name&#39;, &#39;$email&#39;, &#39;$password&#39;)&#34;</span>;
+            <span style="color:#75715e">// simpan data
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">$sql</span>)) {
+                <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil disimpan&#39;);&lt;/script&gt;&#34;</span>;
+                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal menyimpan data&#39;);&lt;/script&gt;&#34;</span>;
+                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+            }
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email &#34;</span> . <span style="color:#a6e22e">$email</span> . <span style="color:#e6db74">&#34; sudah digunakan&#34;</span>;
+        }
+    }
+}
+<span style="color:#f92672">?&gt;</span>
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-5&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Tambah</span> <span style="color:#a6e22e">Data</span> <span style="color:#a6e22e">User</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">$errors</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$error</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert bg-danger&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert&#34;</span>&gt;
+            <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$error</span> <span style="color:#f92672">?&gt;</span>
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">Simpan</span>&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Kita sudah selesai membuat fitur untuk membuat data user, saatnya kita uji coba.</p>
+<p>pergi ke link</p>
+<pre><code>http://localhost/codelabs/simple_crud/create_user.php
+</code></pre><p>(<em>Note: sesuaikan link dengan lokasi folder project yang kalian miliki</em>)</p>
+<p>Pertama kita cek validasi. Jangan inputkan apapun ke dalam form, kemudian tekan tombol simpan, maka hasilnya akan seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/validasi_input_kosong.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/validasi_input_kosong.png"></p>
+<p>kemudian kita coba untu menginputkan data dan menekan tombol simpan lagi, jika tidak ada error akan muncul alert yang menujukkan apakah data berhasil disimpan atau tidak, seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/save_success.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/save_success.png"></p>
+<p>Klik OK, maka kita akan dialihkan ke halaman index.php, untuk saat ini halaman index kita masih kosong, namun kita telah berhasil membuat fitur tambah data.
+Periksa tabel users di phpmyadmin</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/data_saved.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/data_saved.png"></p>
+<p>Silahkan lakukan beberapa pengujian seperti memasukkan email yang sama, atau yang lainnya. Pahami kembali alur kerjanya secara sederhana.</p>
+<h4 id="4-read-data-user">4. Read data user</h4>
+<p>Setelah berhasil membuat data user, kita akan menampilkan data user yang ada di database ke dalam aplikasi kita.</p>
+<p>Buka file <strong>index.php</strong>, lalu tambahkan kode dibawah ini:</p>
+<p><em>(jangan lupa menutup kode php kita dengan <code>?&gt;</code> karena nantinya akan digabung dengan kode html)</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAllUser</span>($db)
+{
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users&#34;</span>;
+    <span style="color:#66d9ef">return</span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetchAll</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+}
+
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Pada kode di atas, kita kembali menyematkan file <code>head.php</code> dari folder template, dan file <code>database_connection.php</code> dari folder konfig yang akan kita gunakan untuk terhubung ke database kita.
+Kita juga membuat fungsi <code>getAllUser($db)</code> dengan parameter <code>$db</code> yang nantinya akan kita dapatkan dari folder <code>database_connection.php</code>. Fungsi ini akan mengembalikan data user yang ada di dalam database.</p>
+<p>Masih di dalam file <code>index.php</code>, pergi ke baris paling bawah dan tambahkan kode berikut ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-4&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table-responsive&#34;</span>&gt;
+        &lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table table-striped&#34;</span>&gt;
+            &lt;<span style="color:#f92672">thead</span>&gt;
+                &lt;<span style="color:#f92672">tr</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">ID</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Kelola</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                &lt;/<span style="color:#f92672">tr</span>&gt;
+            &lt;/<span style="color:#f92672">thead</span>&gt;
+            &lt;<span style="color:#f92672">tbody</span>&gt;
+                <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>)) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+                    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>) <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$user</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+                        &lt;<span style="color:#f92672">tr</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;
+                                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./update_user.php?id=&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-sm btn-success&#34;</span>&gt;<span style="color:#a6e22e">Update</span>&lt;/<span style="color:#f92672">a</span>&gt;
+                                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./delete_user.php?id=&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-sm btn-danger&#34;</span>&gt;<span style="color:#a6e22e">Delete</span>&lt;/<span style="color:#f92672">a</span>&gt;
+                            &lt;/<span style="color:#f92672">td</span>&gt;
+                        &lt;/<span style="color:#f92672">tr</span>&gt;
+                    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+                <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+                    &lt;<span style="color:#f92672">tr</span>&gt;
+                        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-center&#34;</span>&gt;<span style="color:#a6e22e">Tidak</span> <span style="color:#a6e22e">ada</span> <span style="color:#a6e22e">data</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                    &lt;/<span style="color:#f92672">tr</span>&gt;
+                <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endif</span>; <span style="color:#f92672">?&gt;</span>
+            &lt;/<span style="color:#f92672">tbody</span>&gt;
+        &lt;/<span style="color:#f92672">table</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Kode diatas kita adalah html yang kita gunakan untuk membentuk sebuah tabel yang menampung data user dari dalam database.</p>
+<p>Pehatikan bagian kode ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>)) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>) <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$user</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+        &lt;<span style="color:#f92672">tr</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+            &lt;<span style="color:#f92672">td</span>&gt;
+                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./update_user.php?id=&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-sm btn-success&#34;</span>&gt;<span style="color:#a6e22e">Update</span>&lt;/<span style="color:#f92672">a</span>&gt;
+                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./delete_user.php?id=&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-sm btn-danger&#34;</span>&gt;<span style="color:#a6e22e">Delete</span>&lt;/<span style="color:#f92672">a</span>&gt;
+            &lt;/<span style="color:#f92672">td</span>&gt;
+        &lt;/<span style="color:#f92672">tr</span>&gt;
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+    &lt;<span style="color:#f92672">tr</span>&gt;
+        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-center&#34;</span>&gt;<span style="color:#a6e22e">Tidak</span> <span style="color:#a6e22e">ada</span> <span style="color:#a6e22e">data</span>&lt;/<span style="color:#f92672">td</span>&gt;
+    &lt;/<span style="color:#f92672">tr</span>&gt;
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endif</span>; <span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Di bagian tersebut kita memeriksa apakah ada data user di dalam database dengan cara memanggil fungsi <code>getAllUser()</code>.
+Jika ada data user maka akan dijalankan perulangan data menggunakan foreach untuk mencetak baris tabel lalu menampilkan data user pada kolom kolom yang sesuai. Serta mencetak dua buah tombol pada kolom terakhir yang nantinya akan kita gunakan untuk mengupdate dan menghapus data user.</p>
+<hr>
+<p><em>catatan:</em></p>
+<p><em><code>&lt;?= &gt;</code> sama saja dengan <code>&lt;?php echo ?&gt;</code>. Sehingga:</em></p>
+<p><em><code>&lt;?= $user['id'] ?&gt;</code> sama dengan <code>&lt;?php echo $user['id'] ?&gt;</code></em></p>
+<hr>
+<p>Masih di dalam file <code>index.php</code>, tambahkan lagi kode berikut ini pada baris paling bawah untuk menyematkan file <code>foot.php</code> dari folder template.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>Sehingga akhirnya keseluruhan dari file <code>index.php</code> akan menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>)
+{
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users&#34;</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetchAll</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+}
+
+<span style="color:#f92672">?&gt;</span>
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-4&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table-responsive&#34;</span>&gt;
+        &lt;<span style="color:#f92672">table</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;table table-striped&#34;</span>&gt;
+            &lt;<span style="color:#f92672">thead</span>&gt;
+                &lt;<span style="color:#f92672">tr</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">ID</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                    &lt;<span style="color:#f92672">th</span>&gt;<span style="color:#a6e22e">Kelola</span>&lt;/<span style="color:#f92672">th</span>&gt;
+                &lt;/<span style="color:#f92672">tr</span>&gt;
+            &lt;/<span style="color:#f92672">thead</span>&gt;
+            &lt;<span style="color:#f92672">tbody</span>&gt;
+                <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>)) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+                    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">getAllUser</span>(<span style="color:#a6e22e">$db</span>) <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$user</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+                        &lt;<span style="color:#f92672">tr</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;id&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;<span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                            &lt;<span style="color:#f92672">td</span>&gt;
+                                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./update_user.php?id=&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-sm btn-success&#34;</span>&gt;<span style="color:#a6e22e">Update</span>&lt;/<span style="color:#f92672">a</span>&gt;
+                                &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./delete_user.php?id=&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-sm btn-danger&#34;</span>&gt;<span style="color:#a6e22e">Delete</span>&lt;/<span style="color:#f92672">a</span>&gt;
+                            &lt;/<span style="color:#f92672">td</span>&gt;
+                        &lt;/<span style="color:#f92672">tr</span>&gt;
+                    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+                <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#66d9ef">else</span> <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+                    &lt;<span style="color:#f92672">tr</span>&gt;
+                        &lt;<span style="color:#f92672">td</span> <span style="color:#a6e22e">colspan</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;5&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text-center&#34;</span>&gt;<span style="color:#a6e22e">Tidak</span> <span style="color:#a6e22e">ada</span> <span style="color:#a6e22e">data</span>&lt;/<span style="color:#f92672">td</span>&gt;
+                    &lt;/<span style="color:#f92672">tr</span>&gt;
+                <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endif</span>; <span style="color:#f92672">?&gt;</span>
+            &lt;/<span style="color:#f92672">tbody</span>&gt;
+        &lt;/<span style="color:#f92672">table</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Pastikan tidak ada kesalahan pengetikan. Jalankan kembali aplikasi kita. pergi ke link</p>
+<pre><code>http://localhost/codelabs/simple_crud/index.php
+</code></pre><p>(<em>Note: sesuaikan link dengan lokasi folder project yang kalian miliki</em>)</p>
+<p>Jika tidak ada kesalahan, maka sekarang tampilan di browser kalian kurang lebih akan menjadi seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/index.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/index.png"></p>
+<p>Pergi ke halaman create user dengan cara klik menu yang ada di bagian navigasi kemudian cobalah tambahkan beberapa data user yang baru. Pastikan data yang ada di dalam tabel juga akan bertambah.</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/index-2.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/index-2.png"></p>
+<p>Eitss.. kenapa data di kolom ID dari 1 langsung 3 ???</p>
+<p>Tenang, ini dikarenakan kita menggunakan auto increment pada kolom id di dalam database kita. Auto increment adalah data yang otomatis diisikan ke dalam kolom jika kita menambahkan data ke dalam database dan nilainya selalu bertambah satu secara otomatis (auto increment). Dan disini ternyata sebelumnya saya telah menghapus data dengan id 2 sehingga id yang dibuat adalah 3. Id di dalam database kalian mungkin saja berbeda, jika kalian sudah beberapa kali menginput data dan menghapusnya.</p>
+<p>Baik, jadi di bagian ini kita sudah berhasil menampilkan data yang ada di dalam database. Apa selanjutnya ?</p>
+<h4 id="5-update-data-user">5. Update data user</h4>
+<p>Setelah kita berhasil menampilkan data yang ada di database, kali ini kita akan membuat fitur untuk update/edit data yang sudah kita simpan.</p>
+<p>Karena tampilan untuk update user kurang lebih sama ketika kita menambahkan data, maka agar cepat kita akan menggunakan kode pada halaman tambah data user.</p>
+<p>Pergi ke file <code>create_user.php</code>, salin semua kode yang ada di dalamnya, kemudian paste ke dalam file <code>update_user.php</code> dan sesuaikan isinya.</p>
+<p>Sehingga file <code>update_user.php</code> sekarang menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isEmailAvailable</span>(<span style="color:#a6e22e">$db</span>, <span style="color:#a6e22e">$email</span>)
+{
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE email=&#39;$email&#39;&#34;</span>;
+    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetchAll</span>() <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span>;
+}
+
+<span style="color:#a6e22e">$errors</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">// varioabel yang akan digunakan untuk menampung pesan error validasi
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">empty</span>(<span style="color:#a6e22e">$_POST</span>)) {
+
+    <span style="color:#75715e">// ambil data yang dikirimkan melalui form dan simpan ke dalam variabel
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">$name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;name&#39;</span>];
+    <span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;email&#39;</span>];
+    <span style="color:#a6e22e">$password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;password&#39;</span>];
+
+    <span style="color:#75715e">// lakukan validasi untuk tiap inputan, jika inputan kosong maka tambahkan pesan error kedalam variabel $errors
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$name</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nama tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$email</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$password</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Password tidak boleh kosong&#34;</span>;
+    }
+
+    <span style="color:#75715e">// cek jika tidak ada error maka lakukan proses penyimpanan data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">$errors</span>) {
+        <span style="color:#75715e">// cek duplikasi data
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isEmailAvailable</span>(<span style="color:#a6e22e">$db</span>, <span style="color:#a6e22e">$email</span>)) {
+            <span style="color:#75715e">// hash password untuk keamanan
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">$password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">password_hash</span>(<span style="color:#a6e22e">$password</span>, <span style="color:#a6e22e">PASSWORD_DEFAULT</span>);
+            <span style="color:#75715e">// buat sql
+</span><span style="color:#75715e"></span>            <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;INSERT INTO users (name, email, password) VALUES (&#39;$name&#39;, &#39;$email&#39;, &#39;$password&#39;)&#34;</span>;
+            <span style="color:#75715e">// simpan data
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">$sql</span>)) {
+                <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil disimpan&#39;);&lt;/script&gt;&#34;</span>;
+                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal menyimpan data&#39;);&lt;/script&gt;&#34;</span>;
+                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+            }
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email &#34;</span> . <span style="color:#a6e22e">$email</span> . <span style="color:#e6db74">&#34; sudah digunakan&#34;</span>;
+        }
+    }
+}
+<span style="color:#f92672">?&gt;</span>
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-5&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Update</span> <span style="color:#a6e22e">Data</span> <span style="color:#a6e22e">User</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">$errors</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$error</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert bg-danger&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert&#34;</span>&gt;
+            <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$error</span> <span style="color:#f92672">?&gt;</span>
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">Simpan</span>&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Tambahkan kode berikut dibawah block <code>if (!empty($_POST)){}</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_GET) <span style="color:#66d9ef">and</span> <span style="color:#a6e22e">isset</span>($_GET[<span style="color:#e6db74">&#39;id&#39;</span>])) {
+    $id <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;id&#39;</span>];
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE id=&#39;</span><span style="color:#e6db74">$id</span><span style="color:#e6db74">&#39;&#34;</span>;
+    $user <span style="color:#f92672">=</span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$user) {
+        <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+    }
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+}
+
+</code></pre></div><p>Sehingga akan terlihat seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_POST)) {
+    <span style="color:#f92672">...</span>
+    <span style="color:#f92672">...</span>
+    <span style="color:#f92672">...</span>
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_GET) <span style="color:#66d9ef">and</span> <span style="color:#a6e22e">isset</span>($_GET[<span style="color:#e6db74">&#39;id&#39;</span>])) {
+    $id <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;id&#39;</span>];
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE id=&#39;</span><span style="color:#e6db74">$id</span><span style="color:#e6db74">&#39;&#34;</span>;
+    $user <span style="color:#f92672">=</span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$user) {
+        <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+    }
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+}
+</code></pre></div><p>Kode tersebut kita gunakan untuk memeriksa parameter id yang dikirimkan melalui url seperti ini</p>
+<p><code>update_user.php?id=1</code></p>
+<p>jika parameter di url kosong atau bukan id maka halaman akan dialihkan ke <code>index.php</code>.</p>
+<p>kemudian, id yang dikirimkan di dalam url juga akan kita gunakan untuk memeriksa apakah ada data user yang di maksud, jika user tidak ada maka halaman juga akan dialihkan ke <code>index.php</code>.</p>
+<p>Baik kita akan lanjutkan.</p>
+<p>Modifikasi form html yang ada sehingga menjadi seperti ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;name&#39;] ?&gt;&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;email&#39;] ?&gt;&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+        &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">label</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+    &lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span>&gt;
+    &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">Simpan</span>&lt;/<span style="color:#f92672">button</span>&gt;
+&lt;/<span style="color:#f92672">form</span>&gt;
+</code></pre></div><p>Perhatikan bagian input dari form kita.
+Kita menambahkan input baru dengan type hidden yang akan digunakan untuk menyimpan id user yang ingin kita perbarui.
+Input dengan type hidden tidak akan dilihat oleh pengguna karena tidak akan di tampilkan pada form.</p>
+<p>Selain itu, kita juga menambahkan atribut baru pada tiap inputan kita bernama <code>value</code> yang kita isi dengan data user yang ada dalam variabel <code>$user</code></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">
+&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;name&#39;] ?&gt;&#34;</span>&gt;
+
+</code></pre></div><p>atribut value digunakan untuk mengisi input dengan data, dan disini kita isi dengan data awal user sebelum diperbarui.</p>
+<p>Lalu kenapa tidak ditambahkan pada input untuk password?</p>
+<p>Kalian pasti ingat bahwa kita mengubah password yang dibuat menjadi karakter acak (hashed password). Sehingga password ini tidak dapat langsung kita tampilkan untuk menghindari password ter-hash dua kali. Oleh karena itu, kita hanya akan mengupdate password jika kolom password kita isi dengan password yang baru.</p>
+<p>Setelah memodifikasi form, kita akan memodifikasi script/kode php yang digunakan untuk proses menyimpan data.</p>
+<p>Hapus baris kode untuk memvalidasi inputan password karena kita akan membolehkan input password ini kosong.</p>
+<p><em>hapus kode ini</em></p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> ($password <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+    $errors[<span style="color:#e6db74">&#39;password&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Password tidak boleh kosong&#34;</span>;
+}
+</code></pre></div><p>Pergi ke bagian atas, modifikasi blok kode <code>if (!$errors){}</code> sehingga menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$errors) {
+
+    $id <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;id&#39;</span>];
+
+    <span style="color:#75715e">// cek duplikasi data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isEmailAvailable</span>($db, $email, $id)) {
+        <span style="color:#75715e">// cek jika user merubah password
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> ($password <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+            <span style="color:#75715e">// hash password untuk keamanan
+</span><span style="color:#75715e"></span>            $password <span style="color:#f92672">=</span> <span style="color:#a6e22e">password_hash</span>($password, <span style="color:#a6e22e">PASSWORD_DEFAULT</span>);
+            <span style="color:#75715e">// buat sql
+</span><span style="color:#75715e"></span>            $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UPDATE users SET name=&#39;</span><span style="color:#e6db74">$name</span><span style="color:#e6db74">&#39;, email=&#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;, password=&#39;</span><span style="color:#e6db74">$password</span><span style="color:#e6db74">&#39; WHERE id=&#39;</span><span style="color:#e6db74">$id</span><span style="color:#e6db74">&#39;&#34;</span>;
+        } <span style="color:#66d9ef">else</span> {
+            $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UPDATE users SET name=&#39;</span><span style="color:#e6db74">$name</span><span style="color:#e6db74">&#39;, email=&#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39; WHERE id=&#39;</span><span style="color:#e6db74">$id</span><span style="color:#e6db74">&#39;&#34;</span>;
+        }
+        <span style="color:#75715e">// simpan data
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> ($db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>($sql)) {
+            <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil diperbarui&#39;);&lt;/script&gt;&#34;</span>;
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal memperbarui data&#39;);&lt;/script&gt;&#34;</span>;
+            <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+        }
+    } <span style="color:#66d9ef">else</span> {
+        $errors[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email &#34;</span> <span style="color:#f92672">.</span> $email <span style="color:#f92672">.</span> <span style="color:#e6db74">&#34; sudah digunakan&#34;</span>;
+    }
+}
+</code></pre></div><p>Pada blok kode tersebut kita melakukan beberapa perubahan sebagai berikut:</p>
+<ol>
+<li>Menambahkan variabel <code>$id</code> yang menyimpan data id yang dikirimkan melalui form,</li>
+<li>Mengirimkan satu parameter tambahan yaitu id user ke dalam fungsi <code>isEmailAvailable()</code>,</li>
+<li>Memeriksa apakah input password tidak kosong. Jika input password tidak kosong maka password akan di hash seperti sebelumnya dan menyertakan perubahan password pada string <code>$sql</code>. jika input pasword kosong, maka tidak perlu menyertakan perubahan password pada string <code>$sql</code>.</li>
+</ol>
+<p>Setelah itu pergi ke bagian atas dan modifikasi fungsi <code>isEmailAvailable()</code> menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isEmailAvailable</span>($db, $email, $userID)
+{
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE id=&#39;</span><span style="color:#e6db74">$userID</span><span style="color:#e6db74">&#39;&#34;</span>;
+    $oldEmail <span style="color:#f92672">=</span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>)[<span style="color:#e6db74">&#39;email&#39;</span>];
+
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE email=&#39;</span><span style="color:#e6db74">$email</span><span style="color:#e6db74">&#39;&#34;</span>;
+    $checkUser <span style="color:#f92672">=</span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">return</span> ($checkUser <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#66d9ef">or</span> $email <span style="color:#f92672">==</span> $oldEmail);
+}
+</code></pre></div><p>Pada fungsi <code>isEmailAvailable()</code> kita melakukan beberapa perubahan sebagai berikut:</p>
+<ol>
+<li>Menambahkan satu parameter baru yaitu <code>$userID</code>,</li>
+<li>Mengambil email user berdasarkan id yang ada di parameter <code>$userID</code> kemudian menyimpannya ke dalam variabel <code>$oldEmail</code>,</li>
+<li>Mengambil data user berdasarkan email yang ada di parameter <code>$email</code> kemudian menyimpannya ke dalam variabel <code>$checkUser</code>,</li>
+<li>Membandingkan apakah data user kosong atau email yang diinputkan sama dengan email lama user, dan hasil perbandingan tersebut dikirim sebagai nilai kembalian (return value) fungsi <code>isEmailAvailable()</code></li>
+</ol>
+<p>Akhirnya keseluruhan kode dalam file <code>update_user.php</code> akan menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">function</span> <span style="color:#a6e22e">isEmailAvailable</span>(<span style="color:#a6e22e">$db</span>, <span style="color:#a6e22e">$email</span>, <span style="color:#a6e22e">$userID</span>)
+{
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE id=&#39;$userID&#39;&#34;</span>;
+    <span style="color:#a6e22e">$oldEmail</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>)[<span style="color:#e6db74">&#39;email&#39;</span>];
+
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT email FROM users WHERE email=&#39;$email&#39;&#34;</span>;
+    <span style="color:#a6e22e">$checkUser</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">return</span> (<span style="color:#a6e22e">$checkUser</span> <span style="color:#f92672">==</span> <span style="color:#66d9ef">null</span> <span style="color:#a6e22e">or</span> <span style="color:#a6e22e">$email</span> <span style="color:#f92672">==</span> <span style="color:#a6e22e">$oldEmail</span>);
+}
+
+<span style="color:#a6e22e">$errors</span> <span style="color:#f92672">=</span> []; <span style="color:#75715e">// varioabel yang akan digunakan untuk menampung pesan error validasi
+</span><span style="color:#75715e"></span>
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">empty</span>(<span style="color:#a6e22e">$_POST</span>)) {
+
+    <span style="color:#75715e">// ambil data yang dikirimkan melalui form dan simpan ke dalam variabel
+</span><span style="color:#75715e"></span>    <span style="color:#a6e22e">$name</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;name&#39;</span>];
+    <span style="color:#a6e22e">$email</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;email&#39;</span>];
+    <span style="color:#a6e22e">$password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;password&#39;</span>];
+
+    <span style="color:#75715e">// lakukan validasi untuk tiap inputan, jika inputan kosong maka tambahkan pesan error kedalam variabel $errors
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$name</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Nama tidak boleh kosong&#34;</span>;
+    }
+    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$email</span> <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+        <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email tidak boleh kosong&#34;</span>;
+    }
+
+    <span style="color:#75715e">// cek jika tidak ada error maka lakukan proses penyimpanan data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">$errors</span>) {
+
+        <span style="color:#a6e22e">$id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;id&#39;</span>];
+
+        <span style="color:#75715e">// cek duplikasi data
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">isEmailAvailable</span>(<span style="color:#a6e22e">$db</span>, <span style="color:#a6e22e">$email</span>, <span style="color:#a6e22e">$id</span>)) {
+            <span style="color:#75715e">// cek jika user merubah password
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$password</span> <span style="color:#f92672">!=</span> <span style="color:#e6db74">&#34;&#34;</span>) {
+                <span style="color:#75715e">// hash password untuk keamanan
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">$password</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">password_hash</span>(<span style="color:#a6e22e">$password</span>, <span style="color:#a6e22e">PASSWORD_DEFAULT</span>);
+                <span style="color:#75715e">// buat sql
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UPDATE users SET name=&#39;$name&#39;, email=&#39;$email&#39;, password=&#39;$password&#39; WHERE id=&#39;$id&#39;&#34;</span>;
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;UPDATE users SET name=&#39;$name&#39;, email=&#39;$email&#39; WHERE id=&#39;$id&#39;&#34;</span>;
+            }
+            <span style="color:#75715e">// simpan data
+</span><span style="color:#75715e"></span>            <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">$sql</span>)) {
+                <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil diperbarui&#39;);&lt;/script&gt;&#34;</span>;
+                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+            } <span style="color:#66d9ef">else</span> {
+                <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal memperbarui data&#39;);&lt;/script&gt;&#34;</span>;
+                <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+            }
+        } <span style="color:#66d9ef">else</span> {
+            <span style="color:#a6e22e">$errors</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;Email &#34;</span> . <span style="color:#a6e22e">$email</span> . <span style="color:#e6db74">&#34; sudah digunakan&#34;</span>;
+        }
+    }
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">empty</span>(<span style="color:#a6e22e">$_GET</span>) <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">isset</span>(<span style="color:#a6e22e">$_GET</span>[<span style="color:#e6db74">&#39;id&#39;</span>])) {
+    <span style="color:#a6e22e">$id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_GET</span>[<span style="color:#e6db74">&#39;id&#39;</span>];
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE id=&#39;$id&#39;&#34;</span>;
+    <span style="color:#a6e22e">$user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">$user</span>) {
+        <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+    }
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+}
+<span style="color:#f92672">?&gt;</span>
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-5&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h2</span>&gt;<span style="color:#a6e22e">Update</span> <span style="color:#a6e22e">Data</span> <span style="color:#a6e22e">User</span>&lt;/<span style="color:#f92672">h2</span>&gt;
+
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">foreach</span> (<span style="color:#a6e22e">$errors</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">$error</span>) <span style="color:#f92672">:</span> <span style="color:#f92672">?&gt;</span>
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert bg-danger&#34;</span> <span style="color:#a6e22e">role</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;alert&#34;</span>&gt;
+            <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$error</span> <span style="color:#f92672">?&gt;</span>
+        &lt;/<span style="color:#f92672">div</span>&gt;
+    <span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span> <span style="color:#a6e22e">endforeach</span>; <span style="color:#f92672">?&gt;</span>
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Nama</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;text&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;name&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;name&#39;] ?&gt;&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Email</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;email&#39;] ?&gt;&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mb-3&#34;</span>&gt;
+            &lt;<span style="color:#f92672">label</span> <span style="color:#a6e22e">for</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-label&#34;</span>&gt;<span style="color:#a6e22e">Password</span>&lt;/<span style="color:#f92672">label</span>&gt;
+            &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;password&#34;</span>&gt;
+        &lt;/<span style="color:#f92672">div</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">Simpan</span>&lt;/<span style="color:#f92672">button</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Sekarang kita coba mengupdate salah satu data yang kita miliki.
+Pergi ke halaman <code>index.php</code> lalu klik update pada salah satu data, maka akan diarahkan ke halaman <code>update_user.php</code> seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/update_user.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/update_user.png"></p>
+<p>lakukan beberapa perubahan data kemudian klik simpan, jika berhasil maka data akan diperbarui:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/update_success.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/update_success.png"></p>
+<p>Periksa juga kalian di dalamd database, pastikan semuanya terupdate.</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/database_updated.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/database_updated.png"></p>
+<p>Sip, fitur update data user kita sudah berhasil dibuat. Berikutnya kita akan membuat fitur hapus data.</p>
+<h4 id="6-hapus-data-user">6. Hapus data user</h4>
+<p>Setelah berhasil memperbarui data user, kali ini kita akan membuat fitur untuk menghapus data user.</p>
+<p>Buka file <code>delete_user.php</code>, tambahkan kode php berikut ini</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_GET) <span style="color:#66d9ef">and</span> <span style="color:#a6e22e">isset</span>($_GET[<span style="color:#e6db74">&#39;id&#39;</span>])) {
+    $id <span style="color:#f92672">=</span> $_GET[<span style="color:#e6db74">&#39;id&#39;</span>];
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE id=&#39;</span><span style="color:#e6db74">$id</span><span style="color:#e6db74">&#39;&#34;</span>;
+    $user <span style="color:#f92672">=</span> $db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>($sql)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>$user) {
+        <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+    }
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#66d9ef">empty</span>($_POST)) {
+    $id <span style="color:#f92672">=</span> $_POST[<span style="color:#e6db74">&#39;id&#39;</span>];
+    $sql <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DELETE FROM users WHERE id=&#39;</span><span style="color:#e6db74">$id</span><span style="color:#e6db74">&#39;&#34;</span>;
+    <span style="color:#75715e">// hapus data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> ($db<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>($sql)) {
+        <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil Dihapus&#39;);&lt;/script&gt;&#34;</span>;
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal menghapus data&#39;);&lt;/script&gt;&#34;</span>;
+        <span style="color:#66d9ef">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+    }
+}
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>pada kode tersebut seperti biasa kita menyematkan file <code>head.php</code> dan <code>database_connection.php</code>, kemudian kita memeriksa apakah parameter id telah dikirimkan melalui url dan apakah terdapat user sesuai dengan id yang ada di url.
+data user dimasukkan ke dalam variabel <code>$user</code>.
+Kemudian di blok kode berikutnya kita memeriksa apakah ada data id yang di kirimkan melalui form. jika id dikirimkan maka kita akan membuat sql string untuk menghapus data di dalam database berdasarkan id yang dikirimkan tersebut.</p>
+<p>Setelah proses penghapusan dilakukan akan muncul alert yang menunjukkan apa kah data berhasil dihapus ata gagal. kemudian kita akan dialihkan ke halaman <code>index.php</code>.</p>
+<p>Jangan lupa menutup script php dengan <code>?&gt;</code> karena berikutnya kita akan menuliskan kode html.</p>
+<p>Tambahkan kode html berikut di bagian bawah dari script php:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript">&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-4 text-center&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h4</span>&gt;<span style="color:#a6e22e">Hapus</span> <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">berikut</span> <span style="color:#a6e22e">ini</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h4</span>&gt;
+    &lt;<span style="color:#f92672">br</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;<span style="color:#a6e22e">Nama</span><span style="color:#f92672">:</span> <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;<span style="color:#a6e22e">Email</span><span style="color:#f92672">:</span> <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">br</span>&gt;
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">OK</span>&lt;/<span style="color:#f92672">button</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.php&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-danger&#34;</span>&gt;<span style="color:#a6e22e">BATAL</span>&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+</code></pre></div><p>Pada kode diatas kita menampilkan data user yang ingin dihapus sebagai pertanyaan konfirmasi. Kemudian kita juga membuat form yang memiliki satu input dengan type hidden
+yang berfungsi untuk mengirimkan id user untuk dihapus. Variabel <code>$user</code> disini kita dapatkan dari script php yang sebelumnya kita buat.
+Jika tombol OK ditekan maka form akan disubmit, jika tombol BATAL ditekan maka halaman akan dikembalikan ke <code>index.php</code>.</p>
+<p>Terakhir, tambahkan kode php berikut ini pada baris paling bawah.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#66d9ef">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#75715e">?&gt;</span><span style="color:#960050;background-color:#1e0010">
+</span></code></pre></div><p>jangan lupa untuk menutup blok kode php dengan <code>?&gt;</code> karena di dalam file juga terdapat kode html.</p>
+<p>Akhirnya keseluruhan kode dalam file <code>delete_user.php</code> akan menjadi seperti ini:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">empty</span>(<span style="color:#a6e22e">$_GET</span>) <span style="color:#a6e22e">and</span> <span style="color:#a6e22e">isset</span>(<span style="color:#a6e22e">$_GET</span>[<span style="color:#e6db74">&#39;id&#39;</span>])) {
+    <span style="color:#a6e22e">$id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_GET</span>[<span style="color:#e6db74">&#39;id&#39;</span>];
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;SELECT * FROM users WHERE id=&#39;$id&#39;&#34;</span>;
+    <span style="color:#a6e22e">$user</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">query</span>(<span style="color:#a6e22e">$sql</span>)<span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">fetch</span>(<span style="color:#a6e22e">PDO</span><span style="color:#f92672">::</span><span style="color:#a6e22e">FETCH_ASSOC</span>);
+
+    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">$user</span>) {
+        <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+    }
+} <span style="color:#66d9ef">else</span> {
+    <span style="color:#a6e22e">header</span>(<span style="color:#e6db74">&#39;location:./index.php&#39;</span>);
+}
+
+<span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">empty</span>(<span style="color:#a6e22e">$_POST</span>)) {
+    <span style="color:#a6e22e">$id</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">$_POST</span>[<span style="color:#e6db74">&#39;id&#39;</span>];
+    <span style="color:#a6e22e">$sql</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;DELETE FROM users WHERE id=&#39;$id&#39;&#34;</span>;
+    <span style="color:#75715e">// hapus data
+</span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">$db</span><span style="color:#f92672">-&gt;</span><span style="color:#a6e22e">exec</span>(<span style="color:#a6e22e">$sql</span>)) {
+        <span style="color:#75715e">// berhasil
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Data berhasil Dihapus&#39;);&lt;/script&gt;&#34;</span>;
+        <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+    } <span style="color:#66d9ef">else</span> {
+        <span style="color:#75715e">// gagal
+</span><span style="color:#75715e"></span>        <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;script&gt;alert(&#39;Gagal menghapus data&#39;);&lt;/script&gt;&#34;</span>;
+        <span style="color:#a6e22e">echo</span> <span style="color:#e6db74">&#34;&lt;meta http-equiv=&#39;refresh&#39; content=&#39;0; url=index.php&#39;&gt;&#34;</span>;
+    }
+}
+<span style="color:#f92672">?&gt;</span>
+
+&lt;<span style="color:#f92672">div</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;container py-4 text-center&#34;</span>&gt;
+    &lt;<span style="color:#f92672">h4</span>&gt;<span style="color:#a6e22e">Hapus</span> <span style="color:#a6e22e">data</span> <span style="color:#a6e22e">user</span> <span style="color:#a6e22e">berikut</span> <span style="color:#a6e22e">ini</span><span style="color:#f92672">?</span>&lt;/<span style="color:#f92672">h4</span>&gt;
+    &lt;<span style="color:#f92672">br</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;<span style="color:#a6e22e">Nama</span><span style="color:#f92672">:</span> <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;name&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">div</span>&gt;<span style="color:#a6e22e">Email</span><span style="color:#f92672">:</span> <span style="color:#f92672">&lt;?=</span> <span style="color:#a6e22e">$user</span>[<span style="color:#e6db74">&#39;email&#39;</span>] <span style="color:#f92672">?&gt;</span>&lt;/<span style="color:#f92672">div</span>&gt;
+    &lt;<span style="color:#f92672">br</span>&gt;
+    &lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
+        &lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;hidden&#34;</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;id&#34;</span> <span style="color:#a6e22e">value</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;&lt;?= $user[&#39;id&#39;] ?&gt;&#34;</span>&gt;
+        &lt;<span style="color:#f92672">button</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;submit&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-success&#34;</span>&gt;<span style="color:#a6e22e">OK</span>&lt;/<span style="color:#f92672">button</span>&gt;
+        &lt;<span style="color:#f92672">a</span> <span style="color:#a6e22e">href</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;./index.php&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;btn btn-danger&#34;</span>&gt;<span style="color:#a6e22e">BATAL</span>&lt;/<span style="color:#f92672">a</span>&gt;
+    &lt;/<span style="color:#f92672">form</span>&gt;
+&lt;/<span style="color:#f92672">div</span>&gt;
+
+<span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+<span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/foot.php&#39;</span>);
+<span style="color:#f92672">?&gt;</span>
+</code></pre></div><p>Proses kode kita sudah selesai saatnya kita uji coba.</p>
+<p>Pergi ke halaman <code>index.php</code> dan klik delete pada salah satu data yang ada di dalam tabel. Maka kita akan dialihkan ke halaman <code>delete_user.php</code> seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/delete_user.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/delete_user.png"></p>
+<p>Klik <code>OK</code> maka data akan dihapus, dan muncul alert seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/delete_success.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/delete_success.png"></p>
+<p>Klik <code>OK</code> lagi maka daftar user di halaman <code>index.php</code> telah diperbarui menjadi seperti ini:</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/updated_list.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/updated_list.png"></p>
+<p>Pastikan data di dalam database juga terhapus</p>
+<p><img src="/img/codelabs/simple-crud-with-php-and-mysql/deleted_user_db.png" class="shadow-sm img-fluid w-100" alt="/img/codelabs/simple-crud-with-php-and-mysql/deleted_user_db.png"></p>
+<hr>
+<p>Baik, sampai sejauh ini aplikasi web CRUD sedehana kita sudah selesai dibuat.
+Tentunya masih banyak bagian yang harus diperbaiki, untuk itu cobalah untuk modifikasi dan explore project yang kalian buat. Uji coba dan cari semua kesalahan yang mungkin muncul, pahami error yang terjadi karena proses <em><strong>trial and error</strong></em> itulah yang akan mengasah kemampuan memprogram kita.</p>
+
         </article>
     </div>
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "rizkykurniawan" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
 </section><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
     crossorigin="anonymous"></script>
