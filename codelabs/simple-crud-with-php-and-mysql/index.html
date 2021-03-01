@@ -306,9 +306,7 @@ dan tambahkan kode</p>
 </code></pre></div><p>Jika selesai, pastikan tampilan aplikasi kita masih sama seperti sebelumnya.</p>
 <p>Baik kita akan mulai bermain dengan data kali ini.</p>
 <p>Pertama kita akan menangkap data yang kita kirimkan dari form. Pastikan kalian menggunakan metode <strong>POST</strong> seperti ini</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
-&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">form</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;mt-4&#34;</span> <span style="color:#a6e22e">method</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;POST&#34;</span>&gt;
 </code></pre></div><p>Lalu apa itu metode POST??</p>
 <p>POST merupakan salah satu http request yang biasanya digunakan untuk mengirimkan data ke dalam backend (untuk saat ini anggap saja server). Ada beberapa jenis http request yang sering digunakan sebagai berikut:</p>
 <ul>
@@ -318,9 +316,7 @@ dan tambahkan kode</p>
 <li>DELETE = Digunakan untuk mengirimkan permintaan hapus data</li>
 </ul>
 <p>Baik kembali lagi ke bagian form, pastikan juga setiap input yang ada di dalam form kita memiliki atribut <strong>name</strong>. Contoh nya seperti ini</p>
-<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">
-&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
-
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-html" data-lang="html">&lt;<span style="color:#f92672">input</span> <span style="color:#a6e22e">name</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">type</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span> <span style="color:#a6e22e">class</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;form-control&#34;</span> <span style="color:#a6e22e">id</span><span style="color:#f92672">=</span><span style="color:#e6db74">&#34;email&#34;</span>&gt;
 </code></pre></div><p>Pada contoh diatas input email memiliki atribut name=&ldquo;email&rdquo;, nama email ini akan kita gunakan untuk mengambil datanya ketika kita mengirimkan data melalui form, oleh karena itu atribut name tidak boleh memiliki nilai yang sama karena akan mempengaruhi proses pengambilan data.</p>
 <p>setelah yakin semuanya sudah siap, pergi ke baris paling atas di bawah baris kode <code>include(&quot;./template/head.php&quot;);</code> pada file <strong>create_user.php</strong>, kemudian tambahkan kode php seperti ini</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-php" data-lang="php">$errors <span style="color:#f92672">=</span> []; <span style="color:#75715e">// varioabel yang akan digunakan untuk menampung pesan error validasi
@@ -641,7 +637,7 @@ Jika ada data user maka akan dijalankan perulangan data menggunakan foreach untu
 <p>Setelah kita berhasil menampilkan data yang ada di database, kali ini kita akan membuat fitur untuk update/edit data yang sudah kita simpan.</p>
 <p>Karena tampilan untuk update user kurang lebih sama ketika kita menambahkan data, maka agar cepat kita akan menggunakan kode pada halaman tambah data user.</p>
 <p>Pergi ke file <code>create_user.php</code>, salin semua kode yang ada di dalamnya, kemudian paste ke dalam file <code>update_user.php</code> dan sesuaikan isinya.</p>
-<p>Sehingga file <code>update_user.php</code> sekarang menjadi seperti ini:</p>
+<p>Sehingga file <code>update_user.php</code> sekarang menjadi seperti ini:\</p>
 <div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-typescript" data-lang="typescript"><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 <span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./template/head.php&#39;</span>);
 <span style="color:#a6e22e">include</span>(<span style="color:#e6db74">&#39;./config/database_connection.php&#39;</span>);

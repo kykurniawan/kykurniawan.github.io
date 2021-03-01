@@ -30,6 +30,15 @@ p {
     -webkit-overflow-scrolling: touch;
 }
 
+.nav-scroller .nav::-webkit-scrollbar {
+    height: 5px;
+}
+
+.nav-scroller .nav::-webkit-scrollbar-thumb {
+    background-color: #ffc107;
+    border-radius: 5px;
+}
+
 .merriweather {
     font-family: 'Merriweather', serif;
 }
@@ -40,6 +49,10 @@ p {
 
 /* custom background color */
 
+.bg-smoke {
+    background-color: #ebebeb;
+}
+
 .bg-teal {
     background-color: #008080;
 }
@@ -48,10 +61,54 @@ p {
     background-color: #8fc5c5;
 }
 
+.bg-blue-light-1 {
+    background-color: #1976d2;
+}
+
+.text-blue-light-1 {
+    background-color: #1976d2;
+}
+
+.rounded-15 {
+    border-radius: 15px;
+}
+
+.rounded-20 {
+    border-radius: 20px;
+}
+
+.rounded-40 {
+    border-radius: 40px;
+}
+
+.rounded-35-bottom {
+    border-bottom-left-radius: 35px;
+    border-bottom-right-radius: 35px;
+}
+
+.rounded-35-top {
+    border-top-left-radius: 35px;
+    border-top-right-radius: 35px;
+}
+
+.rounded-20-bottom {
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.rounded-20-top {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
 /* custom text color */
 
 .text-teal {
     color: #008080;
+}
+
+.text-blue-light-1 {
+    color: #1976d2;
 }
 
 /* custom link color */
@@ -62,6 +119,22 @@ p {
 
 .link-teal:hover {
     color: #006b6b;
+}
+
+.link-blue-light-1 {
+    color: #1976d2;
+}
+
+.link-blue-light-1:hover {
+    color: #1769bb;
+}
+
+.link-yellow-1 {
+    color: #ffff00;
+}
+
+.link-yellow-1:hover {
+    color: #d8d801;
 }
 
 /* custom button color */

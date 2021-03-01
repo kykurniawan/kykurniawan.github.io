@@ -7,7 +7,7 @@
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/mystyle.css?v=1.3">
+<link rel="stylesheet" href="/css/mystyle.css?v=1.5">
 <link rel="stylesheet" href="/css/prism.css">
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
@@ -33,7 +33,7 @@
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:400,700&subset=latin,cyrillic-ext" rel="stylesheet"
     type="text/css">
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" type="text/css">
+<link href="/css/materialicons.css" rel="stylesheet" type="text/css">
 
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -42,6 +42,7 @@
 
 
 <script src="/js/jquery-3.5.1.min.js"></script>
+<script src="/js/slimscroll.js"></script>
 
 <script>
     function back() {
@@ -73,7 +74,7 @@
     }
 </style><body class="bg-light">
     <div id="content">
-        <nav id="actionbar" class="bg-white py-3">
+        <nav id="actionbar" class="bg-light py-3">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-5 mx-auto">
@@ -83,17 +84,17 @@
             </div>
         </nav>
 
-<nav id="actionbar" class="bg-white py-3 fixed-top shadow-sm">
+<nav id="actionbar" class="bg-teal py-3 fixed-top shadow-sm">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto d-flex justify-content-between">
                 <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
-                    onclick="back()" class="material-icons text-secondary">arrow_back</button>
+                    onclick="back()" class="material-icons text-light">arrow_back</button>
                 <input autocomplete="off"
                     style="border-radius: 10px; outline:none; border-width: 0px; padding: 3px 10px; box-shadow: none; background-color:#f1f1f1;"
                     placeholder="Type something..." type="text" name="searchBox" id="searchBox" class="w-100" />
                     <button style="padding:0 0 0 10px; border: none; background-color: transparent; outline: none;"
-                        onclick="clearInput('searchBox', true)" class="material-icons text-secondary">clear</button>
+                        onclick="clearInput('searchBox', true)" class="material-icons text-light">clear</button>
             </div>
         </div>
     </div>
