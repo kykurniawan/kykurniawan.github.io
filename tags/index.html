@@ -131,78 +131,40 @@
                         </div>
                     </a>
                     
-                    <a href="https://rizkykurniawan.id/tags/restful-api/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src=''>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">RESTful API</h6>
-                                <small style="font-size: 10px;" class="text-muted">Monday, Mar 1, 2021</small>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/tags/codeigniter/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src=''>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">Codeigniter</h6>
-                                <small style="font-size: 10px;" class="text-muted">Saturday, Feb 6, 2021</small>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/tags/php/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src=''>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">PHP</h6>
-                                <small style="font-size: 10px;" class="text-muted">Saturday, Feb 6, 2021</small>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/tags/website/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src=''>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">Website</h6>
-                                <small style="font-size: 10px;" class="text-muted">Saturday, Feb 6, 2021</small>
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/tags/computer/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src=''>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">Computer</h6>
-                                <small style="font-size: 10px;" class="text-muted">Saturday, Feb 6, 2021</small>
-                            </div>
-                        </div>
-                    </a>
-                    
                 </div>
                 <div class="d-flex justify-content-center">
+<div class="mt-4">
+    <ul class="pagination">
+        <li class="page-item">
+            <a href="/tags/" class="page-link ink-blue-light-1" aria-label="First" style="outline: none; box-shadow: none;"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </li>
+        <li class="page-item disabled">
+            <a  class="page-link ink-blue-light-1"
+                aria-label="Previous" 
+                    style="outline: none; box-shadow: none;"><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link ink-blue-light-1" href="/tags/" style="outline: none; box-shadow: none;">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link ink-blue-light-1" href="/tags/page/2/" style="outline: none; box-shadow: none;">2</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link ink-blue-light-1" href="/tags/page/3/" style="outline: none; box-shadow: none;">3</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link ink-blue-light-1" href="/tags/page/4/" style="outline: none; box-shadow: none;">4</a>
+        </li>
+        <li class="page-item">
+            <a href="/tags/page/2/"  class="page-link ink-blue-light-1" aria-label="Next"
+                style="outline: none; box-shadow: none;"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        <li class="page-item">
+            <a href="/tags/page/4/" class="page-link ink-blue-light-1" aria-label="Last"
+                style="outline: none; box-shadow: none;"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        </li>
+    </ul>
+</div>
 </div>
             </div>
         </div>
@@ -239,6 +201,42 @@
             document.getElementById(id).focus()
         }
     }
+
+    function showSearchModal() {
+        var searcModal = new bootstrap.Modal(document.getElementById('searchModal'), {
+            keyboard: false
+        })
+        searcModal.show()
+    }
+
+    $.fn.moveIt = function () {
+        var $window = $(window);
+        var instances = [];
+
+        $(this).each(function () {
+            instances.push(new moveItItem($(this)));
+        });
+
+        window.addEventListener('scroll', function () {
+            var scrollTop = $window.scrollTop();
+            instances.forEach(function (inst) {
+                inst.update(scrollTop);
+            });
+        }, { passive: true });
+    }
+
+    var moveItItem = function (el) {
+        this.el = $(el);
+        this.speed = parseInt(this.el.attr('data-scroll-speed'));
+    };
+
+    moveItItem.prototype.update = function (scrollTop) {
+        this.el.css('transform', 'translateY(' + (scrollTop / this.speed) + 'px)');
+    }
+    
+    $(function () {
+        $('[data-scroll-speed]').moveIt();
+    });
 </script></body>
 
 </html>

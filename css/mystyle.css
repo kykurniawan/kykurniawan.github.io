@@ -85,6 +85,10 @@ p {
     border-radius: 40px;
 }
 
+.rounded-35 {
+    border-radius: 35px;
+}
+
 .rounded-35-bottom {
     border-bottom-left-radius: 35px;
     border-bottom-right-radius: 35px;

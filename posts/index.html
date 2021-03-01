@@ -98,75 +98,67 @@
 </nav><section class="">
     <div class="container">
         <div class="row">
-            <div class="col-lg-5 mx-auto bg-white py-3">
-                <div class="list-group list-group-flush">
+            <div class="col-lg-5 mx-auto py-3">
+                <div class="row g-3">
                     
-                    <a href="https://rizkykurniawan.id/posts/what-most-important-things-when-writing-program/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
+                    <div class="col-6">
+                        <div class="border-0 rounded-20 card bg-blue-light-5 h-100 mb-2" role="button"
+                            onclick="window.location.href='https:\/\/rizkykurniawan.id\/posts\/what-most-important-things-when-writing-program\/'">
+                            
+                            <img class="img-fluid rounded-20-top w-100 card-img-top" src='https://rizkykurniawan.id/img/programming-languages.jpg'>
+                            
+                            <div class="card-body p-2">
                                 
-                                <img loading="lazy" class="img-fluid rounded w-100" src='https://rizkykurniawan.id/img/programming-languages.jpg'>
+                                <small style="font-size: 10px;" class="text-muted">Programing</small>
                                 
-                            </div>
-                            <div class="col-8">
                                 <h6 class="small m-0">What Most Important Things When Writing Program</h6>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="col-6">
+                        <div class="border-0 rounded-20 card bg-blue-light-5 h-100 mb-2" role="button"
+                            onclick="window.location.href='https:\/\/rizkykurniawan.id\/posts\/how-do-i-learn-to-code\/'">
+                            
+                            <img class="img-fluid rounded-20-top w-100 card-img-top" src='https://rizkykurniawan.id/img/programming-languages.jpg'>
+                            
+                            <div class="card-body p-2">
                                 
                                 <small style="font-size: 10px;" class="text-muted">Programing</small>
                                 
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/posts/how-do-i-learn-to-code/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src='https://rizkykurniawan.id/img/programming-languages.jpg'>
-                                
-                            </div>
-                            <div class="col-8">
                                 <h6 class="small m-0">How Do I Learn to Code</h6>
-                                
-                                <small style="font-size: 10px;" class="text-muted">Programing</small>
-                                
                             </div>
                         </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/posts/what-is-restful-api/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src='https://rizkykurniawan.id/img/programming-languages.jpg'>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">What Is Restful Api and How It Works?</h6>
-                                
-                                <small style="font-size: 10px;" class="text-muted">Programing</small>
-                                
-                            </div>
-                        </div>
-                    </a>
-                    
-                    <a href="https://rizkykurniawan.id/posts/what-is-programing/" class="list-group-item list-group-item-action px-0">
-                        <div class="row">
-                            <div class="col-4">
-                                
-                                <img loading="lazy" class="img-fluid rounded w-100" src='https://rizkykurniawan.id/img/programming-languages.jpg'>
-                                
-                            </div>
-                            <div class="col-8">
-                                <h6 class="small m-0">What Is Programing?</h6>
-                                
-                                <small style="font-size: 10px;" class="text-muted">Programing</small>
-                                
-                            </div>
-                        </div>
-                    </a>
+                    </div>
                     
                 </div>
                 <div class="d-flex justify-content-center">
+<div class="mt-4">
+    <ul class="pagination">
+        <li class="page-item">
+            <a href="/posts/" class="page-link ink-blue-light-1" aria-label="First" style="outline: none; box-shadow: none;"><span aria-hidden="true">&laquo;&laquo;</span></a>
+        </li>
+        <li class="page-item disabled">
+            <a  class="page-link ink-blue-light-1"
+                aria-label="Previous" 
+                    style="outline: none; box-shadow: none;"><span aria-hidden="true">&laquo;</span></a>
+        </li>
+        <li class="page-item disabled">
+            <a class="page-link ink-blue-light-1" href="/posts/" style="outline: none; box-shadow: none;">1</a>
+        </li>
+        <li class="page-item">
+            <a class="page-link ink-blue-light-1" href="/posts/page/2/" style="outline: none; box-shadow: none;">2</a>
+        </li>
+        <li class="page-item">
+            <a href="/posts/page/2/"  class="page-link ink-blue-light-1" aria-label="Next"
+                style="outline: none; box-shadow: none;"><span aria-hidden="true">&raquo;</span></a>
+        </li>
+        <li class="page-item">
+            <a href="/posts/page/2/" class="page-link ink-blue-light-1" aria-label="Last"
+                style="outline: none; box-shadow: none;"><span aria-hidden="true">&raquo;&raquo;</span></a>
+        </li>
+    </ul>
+</div>
 </div>
             </div>
         </div>
@@ -254,6 +246,42 @@
             document.getElementById(id).focus()
         }
     }
+
+    function showSearchModal() {
+        var searcModal = new bootstrap.Modal(document.getElementById('searchModal'), {
+            keyboard: false
+        })
+        searcModal.show()
+    }
+
+    $.fn.moveIt = function () {
+        var $window = $(window);
+        var instances = [];
+
+        $(this).each(function () {
+            instances.push(new moveItItem($(this)));
+        });
+
+        window.addEventListener('scroll', function () {
+            var scrollTop = $window.scrollTop();
+            instances.forEach(function (inst) {
+                inst.update(scrollTop);
+            });
+        }, { passive: true });
+    }
+
+    var moveItItem = function (el) {
+        this.el = $(el);
+        this.speed = parseInt(this.el.attr('data-scroll-speed'));
+    };
+
+    moveItItem.prototype.update = function (scrollTop) {
+        this.el.css('transform', 'translateY(' + (scrollTop / this.speed) + 'px)');
+    }
+    
+    $(function () {
+        $('[data-scroll-speed]').moveIt();
+    });
 </script></body>
 
 </html>

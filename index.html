@@ -91,7 +91,7 @@
             </div>
         </div>
     </div>
-</nav><header class="mb-3">
+</nav><header class="mb-3" data-scroll-speed="2">
     <div class="container">
         <div class="row">
             <div class="col-lg-5 mx-auto bg-blue-light-1 rounded-20-bottom">
@@ -112,7 +112,47 @@
             </div>
         </div>
     </div>
-</header><section class="mb-3">
+</header><section class="">
+    <div class="container pb-4">
+        <div class="row">
+            <div class="col-lg-5 bg-light mx-auto py-3" style="z-index: 10;">
+                <h6 class="small text-muted mb-3" style="font-weight: bold;">MY WORKS</h6>
+                
+                <div class="card border-0 rounded-20 card bg-blue-light-5" role="button"
+                    onclick="window.location.href='https:\/\/rizkykurniawan.id\/works\/official-website-of-the-informatics-engineering-student-association\/'">
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-5 d-flex align-items-center">
+                                
+                                <img class="img-fluid rounded w-100" src='/img/works/web-hmp-ti-uniska.png'>
+                                
+                            </div>
+                            <div class="col-7 p-2">
+                                <h6 class="small m-0">Official website of the Informatics Engineering Student Association</h6>
+                                
+                                <small style="font-size: 10px;" class="text-muted">Web App</small>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="list-group list-group-flush">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5 mx-auto">
+                <div class="card bg-blue-light-5 border-0 rounded-20">
+                    <div class="card-body">
+                        <div class="text-muted text-center small" role="button" onclick="window.location.href='/works'">
+                            SEE ALL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><section class="mb-3">
     <div class="container pb-3">
         <div class="row">
             <div class="col-lg-5 mx-auto py-3">
@@ -187,7 +227,7 @@
                 <div class="card bg-blue-light-5 border-0 rounded-20">
                     <div class="card-body">
                         <div class="text-muted text-center small" role="button" onclick="window.location.href='/posts'">
-                            More Posts</div>
+                            MORE POSTS</div>
                     </div>
                 </div>
             </div>
@@ -229,51 +269,11 @@
                                 
                                 <a href="/ytcontents" class="nav-link p-1">
                                     <div class="h-100 bg-warning d-flex justify-content-center align-items-center" style="width: 12rem; border-radius: 10px;">
-                                        <div class="text-dark">More Videos</div>
+                                        <div class="text-dark">MORE VIDEOS</div>
                                     </div>
                                 </a>
                             </nav>
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section><section class="">
-    <div class="container pb-5">
-        <div class="row">
-            <div class="col-lg-5 mx-auto py-3">
-                <h6 class="small text-muted mb-3" style="font-weight: bold;">MY WORKS</h6>
-                
-                <div class="card border-0 rounded-20 card bg-blue-light-5" role="button"
-                    onclick="window.location.href='https:\/\/rizkykurniawan.id\/works\/official-website-of-the-informatics-engineering-student-association\/'">
-                    <div class="card-body">
-                        <div class="row">
-                            <div class="col-5 d-flex align-items-center">
-                                
-                                <img class="img-fluid rounded w-100" src='/img/works/web-hmp-ti-uniska.png'>
-                                
-                            </div>
-                            <div class="col-7 p-2">
-                                <h6 class="small m-0">Official website of the Informatics Engineering Student Association</h6>
-                                
-                                <small style="font-size: 10px;" class="text-muted">Web App</small>
-                                
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="list-group list-group-flush">
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-lg-5 mx-auto">
-                <div class="card bg-blue-light-5 border-0 rounded-20">
-                    <div class="card-body">
-                        <div class="text-muted text-center small" role="button" onclick="window.location.href='/works'">
-                            More Works</div>
                     </div>
                 </div>
             </div>
@@ -362,6 +362,42 @@
             document.getElementById(id).focus()
         }
     }
+
+    function showSearchModal() {
+        var searcModal = new bootstrap.Modal(document.getElementById('searchModal'), {
+            keyboard: false
+        })
+        searcModal.show()
+    }
+
+    $.fn.moveIt = function () {
+        var $window = $(window);
+        var instances = [];
+
+        $(this).each(function () {
+            instances.push(new moveItItem($(this)));
+        });
+
+        window.addEventListener('scroll', function () {
+            var scrollTop = $window.scrollTop();
+            instances.forEach(function (inst) {
+                inst.update(scrollTop);
+            });
+        }, { passive: true });
+    }
+
+    var moveItItem = function (el) {
+        this.el = $(el);
+        this.speed = parseInt(this.el.attr('data-scroll-speed'));
+    };
+
+    moveItItem.prototype.update = function (scrollTop) {
+        this.el.css('transform', 'translateY(' + (scrollTop / this.speed) + 'px)');
+    }
+    
+    $(function () {
+        $('[data-scroll-speed]').moveIt();
+    });
 </script></body>
 
 </html>
