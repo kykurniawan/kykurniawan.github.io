@@ -65,6 +65,10 @@ p {
     background-color: #1976d2;
 }
 
+.bg-blue-light-5 {
+    background-color: #e2edf8;
+}
+
 .text-blue-light-1 {
     background-color: #1976d2;
 }
@@ -99,6 +103,11 @@ p {
 .rounded-20-top {
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+}
+
+.rounded-20-left {
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
 }
 
 /* custom text color */

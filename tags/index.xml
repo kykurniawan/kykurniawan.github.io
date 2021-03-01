@@ -6,7 +6,34 @@
     <description>Recent content in Tags on RIZKY</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sat, 06 Feb 2021 01:24:20 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 01 Mar 2021 12:54:01 +0800</lastBuildDate><atom:link href="https://rizkykurniawan.id/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Programing</title>
+      <link>https://rizkykurniawan.id/tags/programing/</link>
+      <pubDate>Mon, 01 Mar 2021 12:54:01 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.id/tags/programing/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Coding</title>
+      <link>https://rizkykurniawan.id/tags/coding/</link>
+      <pubDate>Mon, 01 Mar 2021 12:53:21 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.id/tags/coding/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>RESTful API</title>
+      <link>https://rizkykurniawan.id/tags/restful-api/</link>
+      <pubDate>Mon, 01 Mar 2021 12:17:42 +0800</pubDate>
+      
+      <guid>https://rizkykurniawan.id/tags/restful-api/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Codeigniter</title>
       <link>https://rizkykurniawan.id/tags/codeigniter/</link>
@@ -35,29 +62,11 @@
     </item>
     
     <item>
-      <title>Coding</title>
-      <link>https://rizkykurniawan.id/tags/coding/</link>
-      <pubDate>Sat, 06 Feb 2021 00:57:36 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.id/tags/coding/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>Computer</title>
       <link>https://rizkykurniawan.id/tags/computer/</link>
       <pubDate>Sat, 06 Feb 2021 00:57:36 +0800</pubDate>
       
       <guid>https://rizkykurniawan.id/tags/computer/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Programing</title>
-      <link>https://rizkykurniawan.id/tags/programing/</link>
-      <pubDate>Sat, 06 Feb 2021 00:57:36 +0800</pubDate>
-      
-      <guid>https://rizkykurniawan.id/tags/programing/</guid>
       <description></description>
     </item>
     
