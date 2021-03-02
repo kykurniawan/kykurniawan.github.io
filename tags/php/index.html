@@ -7,8 +7,9 @@
 
 
 <link rel="stylesheet" href="/css/bootstrap.min.css">
-<link rel="stylesheet" href="/css/mystyle.css?v=1.5">
+<link rel="stylesheet" href="/css/mystyle.css?v=1.6">
 <link rel="stylesheet" href="/css/prism.css">
+<link rel="stylesheet" href="/css/aos.css">
 <link rel="apple-touch-icon-precomposed" sizes="57x57" href="/apple-touch-icon-57x57.png" />
 <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/apple-touch-icon-114x114.png" />
 <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/apple-touch-icon-72x72.png" />
@@ -43,6 +44,8 @@
 
 <script src="/js/jquery-3.5.1.min.js"></script>
 <script src="/js/slimscroll.js"></script>
+<script src="/js/aos.js"></script>
+<script src="/js/lightense.min.js"></script>
 
 <script>
     function back() {
@@ -66,6 +69,22 @@
             }
         }
     }
+
+    $(window).scroll(function () {
+        var scrollTop = $(window).scrollTop();
+        if (scrollTop > 50) {
+            
+            $('#actionbar').addClass('fixed-top')
+            $('#actionbar .container .row').addClass('p-2')
+            $('#actionbar .container .row div').addClass('rounded-35 shadow-sm')
+        } else {
+            
+            $('#actionbar').removeClass('fixed-top')
+            $('#actionbar .container .row').removeClass('p-2')
+            $('#actionbar .container .row div').removeClass('rounded-35 shadow-sm')
+        }
+    });
+
 </script>
 
 <style>
@@ -74,17 +93,9 @@
     }
 </style><body class="bg-light">
     <div id="content">
-        <nav id="actionbar" class="">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-5 mx-auto bg-blue-light-1 py-3">
-                        <div class="text-teal" style="font-weight: bolder;">RIZKY</div>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        
 
-    <nav id="actionbar" class="fixed-top">
+    <nav id="actionbar" class="">
     <div class="container">
         <div class="row">
             <div class="bg-blue-light-1 py-3 col-lg-5 mx-auto d-flex justify-content-between">
@@ -92,6 +103,21 @@
                     onclick="back()" class="material-icons text-light">arrow_back</button>
                 <div class="text-light text-center"
                     style="font-weight: bolder; overflow: hidden; white-space: nowrap;">Tag: PHP</div>
+                <div class="material-icons text-light" role="button" onclick="window.location.href='/search'">search
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<nav id="actionbar" class="fixed-top actionbar-sticky" style="display: none;">
+    <div class="container">
+        <div class="row p-2">
+            <div class="bg-blue-light-1 py-3 col-lg-5 mx-auto d-flex justify-content-between rounded-35 shadow-sm">
+                <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
+                    onclick="back()" class="material-icons text-light">arrow_back</button>
+                <div class="text-light text-center" style="font-weight: bolder; overflow: hidden; white-space: nowrap;">
+                    Tag: PHP</div>
                 <div class="material-icons text-light" role="button" onclick="window.location.href='/search'">search
                 </div>
             </div>
