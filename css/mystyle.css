@@ -114,6 +114,14 @@ p {
     border-bottom-left-radius: 20px;
 }
 
+.transition-rounded {
+    transition: border-radius .2s;
+}
+
+.transition-padding {
+    transition: padding .2s;
+}
+
 /* custom text color */
 
 .text-teal {

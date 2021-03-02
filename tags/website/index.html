@@ -75,13 +75,15 @@
         if (scrollTop > 50) {
             
             $('#actionbar').addClass('fixed-top')
+            $('#actionbar-filler').show()
             $('#actionbar .container .row').addClass('p-2')
-            $('#actionbar .container .row div').addClass('rounded-35 shadow-sm')
+            $('#actionbar .container .row .action-bar-content').addClass('rounded-35 shadow-sm')
         } else {
             
             $('#actionbar').removeClass('fixed-top')
+            $('#actionbar-filler').hide()
             $('#actionbar .container .row').removeClass('p-2')
-            $('#actionbar .container .row div').removeClass('rounded-35 shadow-sm')
+            $('#actionbar .container .row .action-bar-content').removeClass('rounded-35 shadow-sm')
         }
     });
 
@@ -93,31 +95,24 @@
     }
 </style><body class="bg-light">
     <div id="content">
-        
+        <nav id="actionbar-filler" class="" style="display: none;">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-5 mx-auto py-3 bg-blue-light-1">
+                        <div class="text-blue-light-1" style="font-weight: bolder;">RIZKY</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
 
     <nav id="actionbar" class="">
     <div class="container">
-        <div class="row">
-            <div class="bg-blue-light-1 py-3 col-lg-5 mx-auto d-flex justify-content-between">
+        <div class="row transition-padding">
+            <div class="action-bar-content bg-blue-light-1 py-3 col-lg-5 mx-auto d-flex justify-content-between transition-rounded">
                 <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
                     onclick="back()" class="material-icons text-light">arrow_back</button>
                 <div class="text-light text-center"
                     style="font-weight: bolder; overflow: hidden; white-space: nowrap;">Tag: Website</div>
-                <div class="material-icons text-light" role="button" onclick="window.location.href='/search'">search
-                </div>
-            </div>
-        </div>
-    </div>
-</nav>
-
-<nav id="actionbar" class="fixed-top actionbar-sticky" style="display: none;">
-    <div class="container">
-        <div class="row p-2">
-            <div class="bg-blue-light-1 py-3 col-lg-5 mx-auto d-flex justify-content-between rounded-35 shadow-sm">
-                <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
-                    onclick="back()" class="material-icons text-light">arrow_back</button>
-                <div class="text-light text-center" style="font-weight: bolder; overflow: hidden; white-space: nowrap;">
-                    Tag: Website</div>
                 <div class="material-icons text-light" role="button" onclick="window.location.href='/search'">search
                 </div>
             </div>
