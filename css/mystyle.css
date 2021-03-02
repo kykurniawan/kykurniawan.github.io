@@ -122,6 +122,10 @@ p {
     transition: padding .2s;
 }
 
+.transition-position {
+    transition: position .2s;
+}
+
 /* custom text color */
 
 .text-teal {
@@ -186,4 +190,32 @@ blockquote {
     border-left: 7px solid darkgray;
     padding: 15px 10px 1px 10px;
     background-color: rgb(240, 240, 240);
+}
+
+#searchBox {
+    border-radius: 0;
+    outline: none;
+    border-width: 0 0 1px 0;
+    border-color: #f1f1f1;
+    padding: 3px 0;
+    box-shadow: none;
+    background-color: transparent;
+    color: #f1f1f1;
+}
+
+#searchBox::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: lightgray;
+    opacity: 1;
+    /* Firefox */
+}
+
+#searchBox:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: lightgray;
+}
+
+#searchBox::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: lightgray;
 }

@@ -105,15 +105,13 @@
             </div>
         </nav>
 
-<nav id="actionbar">
+<nav id="actionbar" class="transition-position">
     <div class="container">
         <div class="row transition-padding">
             <div class="action-bar-content bg-blue-light-1 py-3 col-lg-5 mx-auto d-flex justify-content-between transition-rounded">
                 <button style="padding:0 10px 0 0; border: none; background-color: transparent; outline: none;"
                     onclick="back()" class="material-icons text-light">arrow_back</button>
-                <input autocomplete="off"
-                    style="border-radius: 10px; outline:none; border-width: 0px; padding: 3px 10px; box-shadow: none; background-color:#f1f1f1;"
-                    placeholder="Type something..." type="text" name="searchBox" id="searchBox" class="w-100" />
+                <input autocomplete="off" placeholder="Search..." type="text" name="searchBox" id="searchBox" class="w-100" />
                     <button style="padding:0 0 0 10px; border: none; background-color: transparent; outline: none;"
                         onclick="clearInput('searchBox', true)" class="material-icons text-light">clear</button>
             </div>

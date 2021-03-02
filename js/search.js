@@ -21,7 +21,7 @@ function search() {
         <div style="height:70vh" class="d-flex align-items-center justify-content-center">
             <img class="img-fluid" style="width:70%" src="../img/undraw_page_not_found.svg" alt="Not Found">
         </div>
-        ` 
+        `
         $.each(results, function (indexInArray, valueOfElement) {
             res = {}
             res.title = valueOfElement.title
@@ -33,20 +33,18 @@ function search() {
                 return;
             }
             var regex = new RegExp(searchField, "i")
-            var output = '<div class="list-group list-group-flush">'
+            var output = '<div>'
             $.each(jsonData, function (key, val) {
                 if ((val.title.search(regex) != -1)) {
-                    output += '<a href="' + val.permalink + '" class="result-item list-group-item list-group-item-action px-0">'
-                    output += '<h6 class="res-title">' + val.title + '</h6>'
-                    output += '<small class="text-muted">' + val.permalink + '</small>'
-                    output += '</a>'
+                    output += `<div role="button" onclick="window.location.href='` + val.permalink + `'" class="card result-item border-0 bg-blue-light-5 mb-2"><div class="card-body"><h6 class="res-title">` + val.title + `</h6><small class="text-muted">` + val.permalink + `</small></div></div>`
                 }
             });
             output += '</div>'
             $('#results').html(output)
+            console.log(output);
             replaceText()
         });
-        if (($("#searchBox").val() != '') && ($('.result-item').length < 1)){
+        if (($("#searchBox").val() != '') && ($('.result-item').length < 1)) {
             $('#results').html(searchNotFoundPlaceholder)
         }
     });
@@ -54,7 +52,7 @@ function search() {
 
 function replaceText() {
     var searchword = $("#searchBox").val()
-    if ((searchword.length >= 3)) {
+    if ((searchword.length >= 2)) {
         $("#results").find(".bg-warning").removeClass("bg-warning")
 
         var custfilter = new RegExp(searchword, "ig")
