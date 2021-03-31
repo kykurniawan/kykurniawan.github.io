@@ -1,9 +1,11 @@
 :root {
     --dark-blue: #12232Eff;
     --lighter-blue: #007CC7ff;
+    --lighter-blue-hover: #0072b9ff;
     --lightest-blue: #4DA8DAff;
     --shadow-dark-blue: #203647ff;
     --shadow-light-blue: #EEFBFBff;
+    --light-gray: #e6e6e6;
 }
 
 body {
@@ -26,6 +28,10 @@ body {
 
 main {
     flex: 1 0 auto;
+}
+
+.bg-light-gray {
+    background-color: var(--light-gray);
 }
 
 .bg-primary-dark {
@@ -58,6 +64,20 @@ button.navbar-toggler {
     border: none;
 }
 
+.btn {
+    box-shadow: none!important;
+}
+
+.btn-light-blue {
+    background-color: var(--lighter-blue);
+    color: var(--shadow-light-blue);
+}
+
+.btn-light-blue:hover {
+    background-color: var(--lighter-blue-hover);
+    color: var(--shadow-light-blue);
+}
+
 .text-soft-black {
     color: rgb(78, 78, 78);
 }
@@ -66,14 +86,51 @@ button.navbar-toggler {
     font-family: 'Public Sans', sans-serif;
 }
 
+.mplus {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
 .card-post {
     transition: transform .3s, box-shadow .3s;
     border-radius: 1em;
+    border:0;
 }
 
 .card-post:hover {
-    transform: scale(0.97);
+    transform: scale(0.985);
     box-shadow: 0 4px 8px 0 rgba(20, 20, 20, 0.2), 0 6px 20px 0 rgba(20, 20, 20, 0.19);
+}
+
+.card-post:hover::after {
+    height: 3px;
+    animation: card-bottom-border-show .3s;
+    position: absolute;
+    width: 30%;
+    margin: 0 auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100;
+    background: var(--lighter-blue);
+    content: '';
+}
+
+.card-post::after {
+    height: 3px;
+    animation: card-bottom-border-hide .3s;
+    position: absolute;
+    width: 0;
+    margin: 0 auto;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100;
+    background: var(--lighter-blue);
+    content: '';
 }
 
 .card-post .card-img-top {
@@ -89,5 +146,29 @@ button.navbar-toggler {
     }
     .navbar-collapse ul li {
         padding-bottom: .5rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1130px;
+    }
+}
+
+@keyframes card-bottom-border-show {
+    from {
+        width: 0%;
+    }
+    to {
+        width: 30%;
+    }
+}
+
+@keyframes card-bottom-border-hide {
+    from {
+        width: 30%;
+    }
+    to {
+        width: 0%;
     }
 }
