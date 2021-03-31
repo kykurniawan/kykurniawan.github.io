@@ -5,7 +5,9 @@
     --lightest-blue: #4DA8DAff;
     --shadow-dark-blue: #203647ff;
     --shadow-light-blue: #EEFBFBff;
-    --light-gray: #e6e6e6;
+    --light-gray: #f0f0f0;
+    --dark-orange: #c74600;
+    --light-orange: #ff9b65;
 }
 
 body {
@@ -14,21 +16,11 @@ body {
     flex-direction: column;
 }
 
-.va-middle {
-    vertical-align: middle;
-}
-
-.va-bottom {
-    vertical-align: bottom;
-}
-
-.va-top {
-    vertical-align: top;
-}
-
 main {
     flex: 1 0 auto;
 }
+
+/* background */
 
 .bg-light-gray {
     background-color: var(--light-gray);
@@ -42,6 +34,24 @@ main {
     background-color: var(--lighter-blue);
 }
 
+.bg-primary-lightest {
+    background-color: var(--lightest-blue);
+}
+
+.bg-dark-orange {
+    background-color: var(--dark-orange);
+}
+
+.bg-light-orange {
+    background-color: var(--light-orange);
+}
+
+.bg-blue-gradient {
+    background-image: linear-gradient(to right, #007CC7ff, #4DA8DAff);
+}
+
+/* text */
+
 .text-primary-light {
     color: #F7F7FF;
 }
@@ -50,13 +60,21 @@ main {
     color: var(--lighter-blue)
 }
 
+.text-soft-black {
+    color: rgb(78, 78, 78);
+}
+
+/* link */
+
 .link-lighter-blue {
     color: var(--lighter-blue)
 }
 
 .link-lighter-blue:hover {
-    color: var(--shadow-dark-blue)
+    color: var(--lighter-blue-hover)
 }
+
+/* button */
 
 button.navbar-toggler {
     box-shadow: none!important;
@@ -78,26 +96,33 @@ button.navbar-toggler {
     color: var(--shadow-light-blue);
 }
 
-.text-soft-black {
-    color: rgb(78, 78, 78);
-}
+/* font */
 
 .public-sans {
     font-family: 'Public Sans', sans-serif;
+}
+
+.quicksand {
+    font-family: 'Quicksand', sans-serif;
 }
 
 .mplus {
     font-family: 'M PLUS Rounded 1c', sans-serif;
 }
 
+/* other elements */
+
+.rounded-a {
+    border-radius: .8rem;
+}
+
 .card-post {
     transition: transform .3s, box-shadow .3s;
-    border-radius: 1em;
-    border:0;
+    border-radius: .8em;
+    border: 0;
 }
 
 .card-post:hover {
-    transform: scale(0.985);
     box-shadow: 0 4px 8px 0 rgba(20, 20, 20, 0.2), 0 6px 20px 0 rgba(20, 20, 20, 0.19);
 }
 
@@ -134,8 +159,20 @@ button.navbar-toggler {
 }
 
 .card-post .card-img-top {
-    border-top-left-radius: 1em;
-    border-top-right-radius: 1em;
+    border-top-left-radius: .8em;
+    border-top-right-radius: .8em;
+}
+
+.va-middle {
+    vertical-align: middle;
+}
+
+.va-bottom {
+    vertical-align: bottom;
+}
+
+.va-top {
+    vertical-align: top;
 }
 
 @media (max-width: 767.98px) {

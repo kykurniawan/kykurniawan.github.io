@@ -1,6 +1,11 @@
 const swiper = new Swiper('.swiper-container', {
     loop: true,
     spaceBetween: 25,
+    pagination: {
+        el: '.swiper-pagination',
+    },
+    effect: 'coverflow',
+
 });
 
 $('#swiper-control-button .swiper-prev').on('click', () => {
