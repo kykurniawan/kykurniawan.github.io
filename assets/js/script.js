@@ -1,10 +1,11 @@
 const swiper = new Swiper('.swiper-container', {
     loop: true,
-    spaceBetween: 25,
+    centeredSlides: true,
+    spaceBetween: 5,
+    slidesPerView: 1.1,
     pagination: {
         el: '.swiper-pagination',
     },
-    effect: 'coverflow',
 
 });
 

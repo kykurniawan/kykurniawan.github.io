@@ -1,13 +1,26 @@
 :root {
-    --dark-blue: #12232Eff;
+    --dark-blue: #004d7c;
     --lighter-blue: #007CC7ff;
     --lighter-blue-hover: #0072b9ff;
     --lightest-blue: #4DA8DAff;
     --shadow-dark-blue: #203647ff;
     --shadow-light-blue: #EEFBFBff;
-    --light-gray: #ebf4ff;
+    --light-blue-gray: #ebf4ff;
     --dark-orange: #c74600;
+    --dark-orange-hover: #aa3c00;
     --light-orange: #ff9b65;
+    --light-gray: #f1f1f1;
+    --light: #f6f6f6;
+}
+
+::-moz-selection {
+    color: var(--light);
+    background: var(--dark-orange);
+}
+
+::selection {
+    color: var(--light);
+    background: var(--dark-orange);
 }
 
 body {
@@ -24,6 +37,10 @@ main {
 
 .bg-light-gray {
     background-color: var(--light-gray);
+}
+
+.bg-light-blue-gray {
+    background-color: var(--light-blue-gray);
 }
 
 .bg-primary-dark {
@@ -94,6 +111,22 @@ button.navbar-toggler {
 .btn-light-blue:hover {
     background-color: var(--lighter-blue-hover);
     color: var(--shadow-light-blue);
+}
+
+.btn-dark-orange {
+    background-color: var(--dark-orange);
+    color: var(--light);
+}
+
+.btn-dark-orange:hover {
+    background-color: var(--dark-orange-hover);
+    color: var(--light);
+}
+
+/* border */
+
+.border-dark-orange {
+    border: 2.5px solid var(--dark-orange);
 }
 
 /* font */
