@@ -67,6 +67,10 @@ main {
     background-image: linear-gradient(to right, #007CC7ff, #4DA8DAff);
 }
 
+.bg-blue-gradient-dark {
+    background-image: linear-gradient(to bottom right, var(--dark-blue), var(--lighter-blue));
+}
+
 /* text */
 
 .text-primary-light {
@@ -83,12 +87,32 @@ main {
 
 /* link */
 
+[class*=link-] {
+    text-decoration: none;
+}
+
 .link-lighter-blue {
     color: var(--lighter-blue)
 }
 
 .link-lighter-blue:hover {
     color: var(--lighter-blue-hover)
+}
+
+.link-dark-orange {
+    color: var(--dark-orange);
+}
+
+.link-dark-orange:hover {
+    color: var(--dark-orange-hover);
+}
+
+.link-light-custom {
+    color: var(--light);
+}
+
+.link-light-custom:hover {
+    color: var(--dark-orange);
 }
 
 /* button */
