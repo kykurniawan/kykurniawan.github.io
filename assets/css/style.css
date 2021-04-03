@@ -1,5 +1,6 @@
 :root {
     --dark-blue: #004d7c;
+    --dark-blue-hover: #003f66;
     --lighter-blue: #007CC7ff;
     --lighter-blue-hover: #0072b9ff;
     --lightest-blue: #4DA8DAff;
@@ -89,6 +90,14 @@ main {
 
 [class*=link-] {
     text-decoration: none;
+}
+
+.link-dark-blue {
+    color: var(--dark-blue)
+}
+
+.link-dark-blue:hover {
+    color: var(--dark-blue-hover)
 }
 
 .link-lighter-blue {
