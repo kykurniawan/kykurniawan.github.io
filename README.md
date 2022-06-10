@@ -1,2 +1,7 @@
-# kykurniawan.github.io
-Kykurniawan
+# Kykurniawan
+
+```javascript
+const hello = (name) => {
+    return `Hello ${name}`
+}
+```
